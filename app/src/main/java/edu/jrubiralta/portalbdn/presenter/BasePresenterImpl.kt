@@ -5,10 +5,8 @@ import android.support.v4.app.Fragment
 import edu.jrubiralta.portalbdn.persistence.Persistence
 import edu.jrubiralta.portalbdn.ui.view.View
 
-abstract class BasePresenterImpl<V, S>(
-    protected val view: V,
-    protected val persistence: Persistence,
-    protected val story: S)
+abstract class BasePresenterImpl<V>(
+    protected val view: V)
     : BasePresenter<V> where V : View {
 
     override fun init() {

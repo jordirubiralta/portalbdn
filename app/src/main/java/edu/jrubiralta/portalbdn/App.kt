@@ -11,10 +11,6 @@ class App
 
     var kodein = Kodein { importDependencies(this) }
 
-    override fun onCreate() {
-        super.onCreate()
-    }
-
     fun importDependencies(kodeinBuilder: Kodein.Builder) {
         kodeinBuilder.import(appModule(this))
         kodeinBuilder.import(domainModule)
