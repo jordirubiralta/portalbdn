@@ -45,5 +45,5 @@ dependencies {
     testImplementation dataTestDependencies.jUnit
     testImplementation dataTestDependencies.mockito
 
-//    implementation project(':domain')
+    implementation project(':domain')
 }
