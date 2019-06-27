@@ -1,9 +1,8 @@
 package com.enel.edist.presenter.splash
 
-import edu.jrubiralta.portalbdn.persistence.Persistence
 import edu.jrubiralta.portalbdn.presenter.BasePresenterImpl
 import edu.jrubiralta.portalbdn.presenter.splash.SplashPresenter
-import edu.jrubiralta.portalbdn.ui.view.Splash.SplashView
+import edu.jrubiralta.portalbdn.ui.view.splash.SplashView
 import io.reactivex.disposables.Disposable
 
 class SplashPresenterImpl(

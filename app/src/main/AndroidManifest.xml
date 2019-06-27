@@ -11,14 +11,17 @@
             android:theme="@style/AppTheme">
 
         <activity
-                android:name=".ui.activity.Splash.SplashActivity"
-                android:screenOrientation="behind">
+                android:name=".ui.activity.splash.SplashActivity"
+                android:screenOrientation="behind"
+                android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".ui.activity.home.HomeActivity"
+                  android:screenOrientation="behind"
+                  android:theme="@style/SplashTheme"/>
     </application>
 </manifest>

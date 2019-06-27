@@ -1,4 +1,4 @@
-package edu.jrubiralta.portalbdn.ui.activity.Splash
+package edu.jrubiralta.portalbdn.ui.activity.splash
 
 import android.os.Bundle
 import com.enel.edist.presenter.splash.SplashPresenterImpl
@@ -7,9 +7,12 @@ import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
 import edu.jrubiralta.portalbdn.R
+import edu.jrubiralta.portalbdn.navigator.Navigator
+import edu.jrubiralta.portalbdn.navigator.android.NavParams
 import edu.jrubiralta.portalbdn.presenter.splash.SplashPresenter
 import edu.jrubiralta.portalbdn.ui.activity.BaseActivity
-import edu.jrubiralta.portalbdn.ui.view.Splash.SplashView
+import edu.jrubiralta.portalbdn.ui.view.splash.SplashView
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity
     : BaseActivity<SplashPresenter, SplashView>(),
@@ -39,15 +42,23 @@ class SplashActivity
     }
 
     private fun initView() {
+        setContentView(layoutResourceId)
     }
 
     private fun initListeners() {
+        tv_splash.setOnClickListener {
+            goToHomeActivity()
+        }
     }
 
     private fun initData() {
     }
 
     override fun onBackPressed() {
+    }
+
+    override fun goToHomeActivity() {
+        Navigator.openHomePage(NavParams(this@SplashActivity, true))
     }
 
 }
