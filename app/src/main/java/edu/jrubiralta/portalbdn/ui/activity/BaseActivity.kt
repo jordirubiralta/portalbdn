@@ -33,6 +33,7 @@ abstract class BaseActivity<P, V>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(layoutResourceId)
         init()
     }
 
@@ -83,18 +84,6 @@ abstract class BaseActivity<P, V>
         fragmentTransaction.commitAllowingStateLoss()
     }
 
-    override fun goToSplash(invalidateToken: Boolean) {
-    }
-
     override fun getCtx(): Context = this
-
-    override fun showErrorServer() {
-    }
-
-    override fun showError(message: String) {
-    }
-
-    override fun showErrorApp() {
-    }
 
 }

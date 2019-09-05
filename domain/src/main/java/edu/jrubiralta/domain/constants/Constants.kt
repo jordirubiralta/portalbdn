@@ -50,3 +50,7 @@ enum class BuildType {
 enum class Language {
     CA, ES
 }
+
+enum class Screen {
+    HOME
+}

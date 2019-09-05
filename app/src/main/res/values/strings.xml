@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PortalBDN</string>
+
+    <!-- MENU -->
+    <string name="inici">Inici</string>
+    <string name="noticies">Notícies</string>
+    <string name="calendari">Calendari</string>
+    <string name="enquestes">Enquestes</string>
+    <string name="incidencies">Incidències</string>
+
 </resources>
