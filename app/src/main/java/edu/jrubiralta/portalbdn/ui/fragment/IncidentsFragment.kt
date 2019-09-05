@@ -6,8 +6,8 @@ import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
 import edu.jrubiralta.portalbdn.R
-import edu.jrubiralta.portalbdn.presenter.incidents.IncidentsPresenter
-import edu.jrubiralta.portalbdn.presenter.incidents.IncidentsPresenterImpl
+import edu.jrubiralta.portalbdn.presenter.incident.IncidentsPresenter
+import edu.jrubiralta.portalbdn.presenter.incident.IncidentsPresenterImpl
 import edu.jrubiralta.portalbdn.ui.view.indicents.IncidentsView
 
 

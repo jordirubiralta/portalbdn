@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import edu.jrubiralta.portalbdn.navigator.android.NavParams
 import edu.jrubiralta.portalbdn.ui.activity.home.HomeActivity
+import edu.jrubiralta.portalbdn.ui.activity.incident.NewIncidentActivity
 
 object Navigator {
 
@@ -12,15 +13,17 @@ object Navigator {
         openHomeActivity(params.activity, intent, params.finishActivity)
     }
 
+    fun openNewIncident(params: NavParams) {
+        val intent = Intent(params.activity, NewIncidentActivity::class.java)
+        openActivity(params.activity, intent, params.finishActivity)
+    }
+
     private fun openHomeActivity(activity: Activity, intent: Intent, finishActivity: Boolean = true) {
         activity.startActivity(intent)
         if (finishActivity) activity.finishAffinity()
     }
 
     private fun openActivity(activity: Activity, intent: Intent, finishActivity: Boolean = true) {
-        if (activity is HomeActivity) {
-            activity.closeDrawer()
-        }
         activity.startActivity(intent)
         if (finishActivity) activity.finish()
     }

@@ -6,4 +6,6 @@ import edu.jrubiralta.portalbdn.ui.view.home.HomeView
 interface HomePresenter
     : BasePresenter<HomeView> {
 
+    fun moveDrawer()
+
 }

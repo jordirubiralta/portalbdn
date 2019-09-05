@@ -1,7 +1,6 @@
 package edu.jrubiralta.portalbdn.ui.activity.home
 
 import android.os.Bundle
-import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.Gravity
 import android.view.View
@@ -10,6 +9,8 @@ import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
 import edu.jrubiralta.portalbdn.R
+import edu.jrubiralta.portalbdn.navigator.Navigator
+import edu.jrubiralta.portalbdn.navigator.android.NavParams
 import edu.jrubiralta.portalbdn.presenter.home.HomePresenter
 import edu.jrubiralta.portalbdn.presenter.home.HomePresenterImpl
 import edu.jrubiralta.portalbdn.ui.activity.BaseActivity
@@ -49,17 +50,12 @@ class HomeActivity
     }
 
     private fun initView() {
-        setSupportActionBar(toolbar)
-        supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(true)
-            setHomeAsUpIndicator(R.drawable.ic_menu)
-            title=""
-        }
-        toggle = ActionBarDrawerToggle(this, drawer, toolbar,R.string.app_name,R.string.app_name)
         replaceFragment(R.id.navigation_view_main, DrawerFragment.newInstance())
     }
 
     private fun initListeners() {
+        bt_menu.setOnClickListener { presenter.moveDrawer() }
+        bt_add.setOnClickListener { Navigator.openNewIncident(NavParams(this@HomeActivity, false)) }
 
     }
 
@@ -79,41 +75,48 @@ class HomeActivity
         val fragment = PollFragment.newInstance()
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.inici)
-        closeDrawer()
+        presenter.moveDrawer()
+        bt_add.visibility = View.GONE
     }
 
     override fun openNewsFragment() {
         val fragment = NewsFragment.newInstance()
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.noticies)
-        closeDrawer()
+        presenter.moveDrawer()
+        bt_add.visibility = View.GONE
     }
 
     override fun openCalendarFragment() {
         val fragment = CalendarFragment.newInstance()
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.calendari)
-        closeDrawer()
+        presenter.moveDrawer()
+        bt_add.visibility = View.GONE
+
     }
 
     override fun openPollFragment() {
         val fragment = PollFragment.newInstance()
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.enquestes)
-        closeDrawer()
+        presenter.moveDrawer()
+        bt_add.visibility = View.GONE
     }
 
     override fun openIncidentsFragment() {
         val fragment = IncidentsFragment.newInstance()
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.incidencies)
-        closeDrawer()
+        presenter.moveDrawer()
+        bt_add.visibility = View.VISIBLE
     }
 
-    fun closeDrawer() {
+    override fun moveDrawer() {
         if (drawer.isDrawerOpen(Gravity.LEFT)) {
             drawer.closeDrawer(Gravity.LEFT)
-        }
+        } else
+            drawer.openDrawer(Gravity.LEFT)
     }
 
 

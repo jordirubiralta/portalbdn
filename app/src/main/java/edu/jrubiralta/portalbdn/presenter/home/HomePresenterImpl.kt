@@ -8,4 +8,8 @@ class HomePresenterImpl(
     : BasePresenterImpl<HomeView>(view),
         HomePresenter {
 
+    override fun moveDrawer() {
+        view.moveDrawer()
+    }
+
 }

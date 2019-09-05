@@ -1,4 +1,4 @@
-package edu.jrubiralta.portalbdn.presenter.incidents
+package edu.jrubiralta.portalbdn.presenter.incident
 
 import edu.jrubiralta.portalbdn.presenter.BasePresenterImpl
 import edu.jrubiralta.portalbdn.ui.view.indicents.IncidentsView
