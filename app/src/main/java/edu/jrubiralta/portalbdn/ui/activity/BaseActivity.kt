@@ -73,9 +73,9 @@ abstract class BaseActivity<P, V>
 
     protected open fun replaceFragment(containerId: Int, fragment: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.addToBackStack(null)
         fragmentTransaction.replace(containerId, fragment)
-        fragmentTransaction.commitAllowingStateLoss()
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
     }
 
     protected open fun removeFragment(fragment: Fragment) {

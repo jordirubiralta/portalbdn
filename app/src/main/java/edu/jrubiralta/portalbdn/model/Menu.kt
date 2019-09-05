@@ -5,4 +5,5 @@ import edu.jrubiralta.portalbdn.domain.constants.Screen
 data class MenuItemView(
     val screen: Screen,
     val iconId: Int,
-    val nameId: Int)
+    val name: Int,
+    val type: MenuType)

@@ -52,5 +52,5 @@ enum class Language {
 }
 
 enum class Screen {
-    HOME
+    HOME, NEWS, CALENDAR, POLLS, INCIDENTS
 }

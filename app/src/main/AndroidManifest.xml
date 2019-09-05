@@ -21,7 +21,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.home.HomeActivity"
-                  android:screenOrientation="behind"
-                  android:theme="@style/SplashTheme"/>
+                android:screenOrientation="behind"
+                android:theme="@style/SplashTheme"/>
+        <activity android:name=".ui.activity.news.NewsActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/SplashTheme"/>
+
     </application>
 </manifest>

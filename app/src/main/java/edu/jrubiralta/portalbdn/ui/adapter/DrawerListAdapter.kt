@@ -5,8 +5,8 @@ import edu.jrubiralta.portalbdn.R
 import edu.jrubiralta.portalbdn.model.MenuItemView
 import kotlinx.android.synthetic.main.item_menu.view.*
 
-class DrawerListAdapter
-    : BaseAdapter<MenuItemView>() {
+class DrawerListAdapter(onItemClick: (MenuItemView) -> Unit)
+    : BaseAdapter<MenuItemView>(onItemClickListener = onItemClick) {
 
     override val itemLayoutId: Int = R.layout.item_menu
 
@@ -15,7 +15,7 @@ class DrawerListAdapter
     class MenuItemViewHolder(itemView: View) : BaseViewHolder<MenuItemView>(itemView) {
         override fun bind(model: MenuItemView) {
             itemView.icon.setImageResource(model.iconId)
-            itemView.name.setText(model.nameId)
+            itemView.name.setText(model.name)
         }
     }
 }

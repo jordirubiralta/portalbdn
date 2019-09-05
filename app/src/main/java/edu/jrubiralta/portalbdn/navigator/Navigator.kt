@@ -16,4 +16,13 @@ object Navigator {
         activity.startActivity(intent)
         if (finishActivity) activity.finishAffinity()
     }
+
+    private fun openActivity(activity: Activity, intent: Intent, finishActivity: Boolean = true) {
+        if (activity is HomeActivity) {
+            activity.closeDrawer()
+        }
+        activity.startActivity(intent)
+        if (finishActivity) activity.finish()
+    }
+
 }
