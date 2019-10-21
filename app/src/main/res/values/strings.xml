@@ -10,5 +10,11 @@
 
     <string name="nova_incidencia">Nova Incidències</string>
 
+    <!-- LOGIN-->
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_text">Login</string>
+    <string name="register_option">Encara no t\'has registrat?</string>
+
 
 </resources>

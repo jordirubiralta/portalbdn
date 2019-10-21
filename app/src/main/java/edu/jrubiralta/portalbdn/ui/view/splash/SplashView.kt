@@ -5,6 +5,6 @@ import edu.jrubiralta.portalbdn.ui.view.View
 interface SplashView
     : View {
 
-    fun goToHomeActivity()
+    fun goToLoginActivity()
 
 }

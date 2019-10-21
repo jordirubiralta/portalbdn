@@ -4,8 +4,8 @@ import edu.jrubiralta.portalbdn.presenter.BasePresenterImpl
 import edu.jrubiralta.portalbdn.ui.view.poll.PollView
 
 class PollPresenterImpl(
-    view: PollView)
+        view: PollView)
     : BasePresenterImpl<PollView>(view),
-    PollPresenter {
+        PollPresenter {
 
 }

@@ -47,7 +47,7 @@ class SplashActivity
 
     private fun initListeners() {
         tv_splash.setOnClickListener {
-            goToHomeActivity()
+            goToLoginActivity()
         }
     }
 
@@ -57,8 +57,8 @@ class SplashActivity
     override fun onBackPressed() {
     }
 
-    override fun goToHomeActivity() {
-        Navigator.openHomePage(NavParams(this@SplashActivity, true))
+    override fun goToLoginActivity() {
+        Navigator.openLoginPage(NavParams(this@SplashActivity, true))
     }
 
 }
