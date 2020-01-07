@@ -16,5 +16,8 @@
     <string name="login_text">Login</string>
     <string name="register_option">Encara no t\'has registrat?</string>
 
+    <!-- REGISTER-->
+    <string name="register_title">Register</string>
+
 
 </resources>

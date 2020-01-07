@@ -47,7 +47,7 @@ class DrawerFragment :
         }
     }
 
-    private val drawerListAdapter = DrawerListAdapter() {
+    private val drawerListAdapter = DrawerListAdapter {
         presenter.serviceSelected(it)
     }
 

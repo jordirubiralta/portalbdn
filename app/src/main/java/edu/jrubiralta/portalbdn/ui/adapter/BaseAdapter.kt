@@ -13,7 +13,7 @@ abstract class BaseAdapter<T>(
 
     abstract val itemLayoutId: Int
 
-    abstract fun viewHolder(view: View): BaseAdapter.BaseViewHolder<T>
+    abstract fun viewHolder(view: View): BaseViewHolder<T>
 
     override fun getItemCount(): Int = items.size
 
