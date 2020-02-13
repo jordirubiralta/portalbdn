@@ -46,7 +46,7 @@ class SplashActivity
     }
 
     private fun initListeners() {
-        tv_splash.setOnClickListener {
+        iv_splash.setOnClickListener {
             goToLoginActivity()
         }
     }
