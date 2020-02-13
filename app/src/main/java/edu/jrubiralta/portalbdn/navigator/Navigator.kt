@@ -22,7 +22,7 @@ object Navigator {
 
     fun openRegisterPage(params: NavParams) {
         val intent = Intent(params.activity, RegisterActivity::class.java)
-        openRegisterActivity(params.activity, intent, params.finishActivity)
+        openRegisterActivity(params.activity, intent)
     }
 
     fun openNewIncident(params: NavParams) {
