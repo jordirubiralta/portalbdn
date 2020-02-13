@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:paddingStart="48dp"
-    android:paddingEnd="48dp"
-    android:paddingBottom="48dp">
+    android:paddingStart="@dimen/padding_activity"
+    android:paddingEnd="@dimen/padding_activity"
+    android:paddingBottom="@dimen/padding_activity">
 
     <ImageView
         android:id="@+id/iv_logo"
@@ -76,7 +76,7 @@
             android:layout_gravity="center"
             android:background="@color/white"
             android:fontFamily="@font/highwaygothicnarrow"
-            android:hint="Contrasenya"
+            android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/login_text" />

@@ -22,7 +22,7 @@
     <dimen name="button_padding_vertical">16dp</dimen>
     <dimen name="dimen_4">4dp</dimen>
     <dimen name="dimen_8">8dp</dimen>
-
+    <dimen name="padding_activity">48dp</dimen>
 
     <!--    TOOLBAR-->
     <dimen name="toolbar_icon_padding">8dp</dimen>
