@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="48dp">
+    android:paddingStart="48dp"
+    android:paddingEnd="48dp"
+    android:paddingBottom="48dp">
 
     <ImageView
         android:id="@+id/iv_logo"

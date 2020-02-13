@@ -22,9 +22,15 @@
     <string name="register_option">Registra\'t!</string>
     <string name="forgot_option">Has oblidat la teva contrasenya?</string>
 
-
     <!--    REGISTER-->
-    <string name="register_title">Register</string>
-
+    <string name="register_title">Registra\'t</string>
+    <string name="name">Nom</string>
+    <string name="surname">Cognom</string>
+    <string name="age">Edat</string>
+    <string name="password">Contrasenya</string>
+    <string name="mail">Correu electrònic</string>
+    <string name="mail_2">Repetir correu electrònic</string>
+    <string name="have_user">Ja tens usuari?</string>
+    <string name="do_login">Inicia sessió</string>
 
 </resources>
