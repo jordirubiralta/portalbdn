@@ -52,7 +52,7 @@ class LoginActivity
     }
 
     private fun initListeners() {
-        bt_login.setOnClickListener {
+        btn_login.setOnClickListener {
             goToHomeActivity()
         }
 

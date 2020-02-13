@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">PortalBDN</string>
 
-    <!-- MENU -->
+    <!--    SPLASH-->
+    <string name="autor">by Jordi Rubiralta</string>
+
+    <!--    MENU-->
     <string name="inici">Inici</string>
     <string name="noticies">Notícies</string>
     <string name="calendari">Calendari</string>
@@ -10,13 +13,17 @@
 
     <string name="nova_incidencia">Nova Incidències</string>
 
-    <!-- LOGIN-->
-    <string name="username_hint">Username</string>
-    <string name="password_hint">Password</string>
-    <string name="login_text">Login</string>
-    <string name="register_option">Encara no t\'has registrat?</string>
+    <!--    LOGIN-->
+    <string name="login_title">Iniciar sessió</string>
+    <string name="username_hint">Nom d\'usuari</string>
+    <string name="password_hint">Contrasenya</string>
+    <string name="login_text">Entrar</string>
+    <string name="register_text">Encara no tens usuari?</string>
+    <string name="register_option">Registrat!</string>
+    <string name="forgot_option">Has oblidat la teva contrasenya?</string>
 
-    <!-- REGISTER-->
+
+    <!--    REGISTER-->
     <string name="register_title">Register</string>
 
 
