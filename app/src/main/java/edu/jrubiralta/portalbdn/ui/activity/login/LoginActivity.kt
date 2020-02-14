@@ -71,7 +71,7 @@ class LoginActivity
     }
 
     override fun goToRegisterActivity() {
-        Navigator.openRegisterPage(NavParams(this@LoginActivity, true))
+        Navigator.openRegisterPage(NavParams(this@LoginActivity, false))
     }
 }
 

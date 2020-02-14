@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".ui.activity.home.HomeActivity"
                 android:screenOrientation="behind"
                 android:theme="@style/SplashTheme"/>
@@ -28,10 +29,10 @@
             android:theme="@style/SplashTheme"/>
         <activity android:name=".ui.activity.login.LoginActivity"
             android:screenOrientation="behind"
-            android:theme="@style/SplashTheme" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity android:name=".ui.activity.register.RegisterActivity"
             android:screenOrientation="behind"
-            android:theme="@style/SplashTheme" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
 
     </application>
 </manifest>
