@@ -33,4 +33,15 @@
     <string name="have_user">Ja tens usuari?</string>
     <string name="do_login">Inicia sessió</string>
 
+    <!--    Nova incidencia-->
+    <string name="incidencia_title">Títol</string>
+    <string name="incidencia_title_hint">Banc trencat</string>
+    <string name="incidencia_description">Descripció</string>
+    <string name="incidencia_description_hint">El banc de davant del McDonalds està trencat.</string>
+    <string name="incidencia_location">On es troba aquest problema?</string>
+    <string name="incidencia_location_hint">Cantonada carrer del Mar amb la Rambla</string>
+    <string name="btn_new_incidencia">Afegir</string>
+
+
+
 </resources>

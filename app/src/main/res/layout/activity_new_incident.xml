@@ -1,9 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent" android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <include layout="@layout/view_toolbar" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/view_toolbar" />
+
+    <ScrollView
+        android:id="@+id/sv_new_incidencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginBottom="@dimen/dimen_24"
+        android:layout_marginStart="@dimen/padding_activity"
+        android:layout_marginEnd="@dimen/padding_activity">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/new_incidencia_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/highwaygothicnarrow"
+                android:text="@string/incidencia_title"
+                android:textColor="@color/darkx_grey"
+                android:textSize="@dimen/login_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_4"
+                android:background="@drawable/zz_edittext_background"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:paddingStart="@dimen/dimen_2"
+                android:paddingTop="@dimen/dimen_8"
+                android:paddingEnd="@dimen/dimen_2"
+                android:paddingBottom="@dimen/dimen_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_incidencia_title">
+
+                <EditText
+                    android:id="@+id/et_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:fontFamily="@font/highwaygothicnarrow"
+                    android:hint="@string/incidencia_title_hint"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:paddingEnd="@dimen/dimen_8"
+                    android:textColor="@color/darkx_grey"
+                    android:textSize="@dimen/login_text" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/new_incidencia_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/highwaygothicnarrow"
+                android:text="@string/incidencia_description"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:textColor="@color/darkx_grey"
+                android:textSize="@dimen/incidencia_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_title" />
+
+            <LinearLayout
+                android:id="@+id/ll_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_4"
+                android:background="@drawable/zz_edittext_background"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:paddingStart="@dimen/dimen_2"
+                android:paddingTop="@dimen/dimen_8"
+                android:paddingEnd="@dimen/dimen_2"
+                android:paddingBottom="@dimen/dimen_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/new_incidencia_description">
+
+                <EditText
+                    android:id="@+id/et_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:fontFamily="@font/highwaygothicnarrow"
+                    android:gravity="top"
+                    android:hint="@string/incidencia_description_hint"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:paddingEnd="@dimen/dimen_8"
+                    android:textColor="@color/darkx_grey"
+                    android:textSize="@dimen/login_text"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/new_incidencia_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/highwaygothicnarrow"
+                android:text="@string/incidencia_location"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:textColor="@color/darkx_grey"
+                android:textSize="@dimen/login_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_description" />
+
+            <LinearLayout
+                android:id="@+id/ll_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_4"
+                android:background="@drawable/zz_edittext_background"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:paddingStart="@dimen/dimen_2"
+                android:paddingTop="@dimen/dimen_8"
+                android:paddingEnd="@dimen/dimen_2"
+                android:paddingBottom="@dimen/dimen_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/new_incidencia_location">
+
+                <EditText
+                    android:id="@+id/et_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:fontFamily="@font/highwaygothicnarrow"
+                    android:gravity="top"
+                    android:hint="@string/incidencia_location_hint"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:paddingEnd="@dimen/dimen_8"
+                    android:textColor="@color/darkx_grey"
+                    android:textSize="@dimen/login_text"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/button_padding_horizontal"
+        android:paddingTop="@dimen/button_padding_vertical"
+        android:paddingEnd="@dimen/button_padding_horizontal"
+        android:paddingBottom="@dimen/button_padding_vertical"
+        android:text="@string/btn_new_incidencia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sv_new_incidencia" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -26,7 +26,8 @@
                 android:theme="@style/SplashTheme"/>
         <activity android:name=".ui.activity.incident.NewIncidentActivity"
             android:screenOrientation="behind"
-            android:theme="@style/SplashTheme"/>
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".ui.activity.login.LoginActivity"
             android:screenOrientation="behind"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />

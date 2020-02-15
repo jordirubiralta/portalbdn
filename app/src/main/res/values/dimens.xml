@@ -28,4 +28,7 @@
     <dimen name="toolbar_icon_padding">8dp</dimen>
     <dimen name="toolbar_icon">48dp</dimen>
 
+<!--    NOVA INCIDENCIA-->
+    <dimen name="incidencia_large">34sp</dimen>
+    <dimen name="incidencia_medium">30sp</dimen>
 </resources>
