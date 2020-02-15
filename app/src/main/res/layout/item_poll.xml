@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/card_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/button_padding_horizontal"
+    android:paddingTop="@dimen/dimen_24"
+    android:paddingEnd="@dimen/button_padding_horizontal"
+    android:paddingBottom="@dimen/dimen_24">
+
+    <TextView
+        android:id="@+id/tv_poll_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:textColor="@color/darkx_grey"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Creus que hauriem d'afegir cendrés a les escombraries?" />
+
+    <TextView
+        android:id="@+id/tv_poll_yes"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:background="@drawable/zz_poll_button"
+        android:inputType="textMultiLine"
+        android:gravity="center"
+        android:textColor="@color/darkx_grey"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_poll_question"
+        tools:text="SI" />
+
+    <TextView
+        android:id="@+id/tv_poll_no"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:background="@drawable/zz_poll_button"
+        android:inputType="textMultiLine"
+        android:gravity="center"
+        android:textColor="@color/darkx_grey"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_poll_question"
+        tools:text="NO" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</android.support.constraint.ConstraintLayout>

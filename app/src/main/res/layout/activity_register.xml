@@ -42,7 +42,7 @@
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/login_text"
+            android:textSize="@dimen/text_small"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/et_surname"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/login_text"
+            android:textSize="@dimen/text_small"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/et_name"
@@ -94,7 +94,7 @@
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/login_text" />
+            android:textSize="@dimen/text_small" />
 
     </LinearLayout>
 
@@ -133,7 +133,7 @@
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/login_text" />
+            android:textSize="@dimen/text_small" />
 
     </LinearLayout>
 
@@ -164,7 +164,7 @@
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/login_text" />
+            android:textSize="@dimen/text_small" />
 
     </LinearLayout>
 
@@ -195,7 +195,7 @@
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/login_text" />
+            android:textSize="@dimen/text_small" />
 
     </LinearLayout>
 
@@ -230,7 +230,7 @@
             android:layout_marginEnd="@dimen/dimen_2"
             android:fontFamily="@font/highwaygothicnarrow"
             android:text="@string/have_user"
-            android:textSize="@dimen/login_text" />
+            android:textSize="@dimen/text_small" />
 
         <TextView
             android:id="@+id/tv_do_login"
@@ -239,7 +239,7 @@
             android:layout_marginStart="@dimen/dimen_4"
             android:fontFamily="@font/highwaygothicnarrow"
             android:text="@string/do_login"
-            android:textSize="@dimen/login_text"
+            android:textSize="@dimen/text_small"
             android:textStyle="bold" />
 
     </LinearLayout>

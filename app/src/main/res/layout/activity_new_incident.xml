@@ -32,7 +32,7 @@
                 android:fontFamily="@font/highwaygothicnarrow"
                 android:text="@string/incidencia_title"
                 android:textColor="@color/darkx_grey"
-                android:textSize="@dimen/login_title"
+                android:textSize="@dimen/title_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,7 +63,7 @@
                     android:paddingStart="@dimen/dimen_8"
                     android:paddingEnd="@dimen/dimen_8"
                     android:textColor="@color/darkx_grey"
-                    android:textSize="@dimen/login_text" />
+                    android:textSize="@dimen/text_small" />
 
             </LinearLayout>
 
@@ -75,7 +75,7 @@
                 android:text="@string/incidencia_description"
                 android:layout_marginTop="@dimen/dimen_24"
                 android:textColor="@color/darkx_grey"
-                android:textSize="@dimen/incidencia_medium"
+                android:textSize="@dimen/text_large"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_title" />
 
@@ -106,7 +106,7 @@
                     android:paddingStart="@dimen/dimen_8"
                     android:paddingEnd="@dimen/dimen_8"
                     android:textColor="@color/darkx_grey"
-                    android:textSize="@dimen/login_text"
+                    android:textSize="@dimen/text_small"
                     android:inputType="textMultiLine" />
 
             </LinearLayout>
@@ -119,7 +119,7 @@
                 android:text="@string/incidencia_location"
                 android:layout_marginTop="@dimen/dimen_24"
                 android:textColor="@color/darkx_grey"
-                android:textSize="@dimen/login_text"
+                android:textSize="@dimen/text_small"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_description" />
 
@@ -150,7 +150,7 @@
                     android:paddingStart="@dimen/dimen_8"
                     android:paddingEnd="@dimen/dimen_8"
                     android:textColor="@color/darkx_grey"
-                    android:textSize="@dimen/login_text"
+                    android:textSize="@dimen/text_small"
                     android:inputType="textMultiLine" />
 
             </LinearLayout>

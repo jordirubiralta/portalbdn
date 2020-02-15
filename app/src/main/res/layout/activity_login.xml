@@ -48,7 +48,7 @@
             android:fontFamily="@font/highwaygothicnarrow"
             android:hint="@string/username_hint"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/login_text" />
+            android:textSize="@dimen/text_small" />
 
     </LinearLayout>
 
@@ -85,7 +85,7 @@
             android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/login_text" />
+            android:textSize="@dimen/text_small" />
 
     </LinearLayout>
 
@@ -96,7 +96,7 @@
         android:layout_marginTop="3dp"
         android:fontFamily="@font/highwaygothicnarrow"
         android:text="@string/forgot_option"
-        android:textSize="@dimen/login_text_secondary"
+        android:textSize="@dimen/login_secondary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_password" />
@@ -134,7 +134,7 @@
             android:layout_marginEnd="@dimen/dimen_2"
             android:fontFamily="@font/highwaygothicnarrow"
             android:text="@string/register_text"
-            android:textSize="@dimen/login_text" />
+            android:textSize="@dimen/text_small" />
 
         <TextView
             android:id="@+id/tv_register"
@@ -143,7 +143,7 @@
             android:layout_marginStart="@dimen/dimen_4"
             android:fontFamily="@font/highwaygothicnarrow"
             android:text="@string/register_option"
-            android:textSize="@dimen/login_text"
+            android:textSize="@dimen/text_small"
             android:textStyle="bold" />
 
     </LinearLayout>

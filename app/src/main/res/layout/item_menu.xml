@@ -27,7 +27,7 @@
         android:fontFamily="@font/highwaygothicnarrow"
         android:layout_marginStart="@dimen/dimen_12"
         android:textColor="@color/darkx_grey"
-        android:textSize="@dimen/login_text"
+        android:textSize="@dimen/text_small"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/icon"
         app:layout_constraintTop_toTopOf="parent"

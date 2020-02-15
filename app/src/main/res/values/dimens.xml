@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--    TEXT-->
+    <dimen name="login_secondary">16sp</dimen>
+    <dimen name="text_small">20sp</dimen>
+    <dimen name="text_medium">24sp</dimen>
+    <dimen name="text_large">30sp</dimen>
+    <dimen name="title_text">34sp</dimen>
+
     <!--    Splash-->
     <dimen name="splash_logo">400dp</dimen>
     <dimen name="splash_margins">8dp</dimen>
 
     <!--    LOGIN-->
-    <dimen name="text_medium">14sp</dimen>
-    <dimen name="login_text">20sp</dimen>
-    <dimen name="login_title">34sp</dimen>
     <dimen name="login_logo">250dp</dimen>
     <dimen name="login_card_size">350dp</dimen>
     <dimen name="login_margin_card_horizontal">24dp</dimen>
@@ -17,7 +22,6 @@
     <dimen name="dimen_2">2dp</dimen>
     <dimen name="icon_size">8dp</dimen>
     <dimen name="dimen_12">12dp</dimen>
-    <dimen name="login_text_secondary">16sp</dimen>
     <dimen name="button_padding_horizontal">28dp</dimen>
     <dimen name="button_padding_vertical">16dp</dimen>
     <dimen name="dimen_4">4dp</dimen>
@@ -28,7 +32,6 @@
     <dimen name="toolbar_icon_padding">8dp</dimen>
     <dimen name="toolbar_icon">48dp</dimen>
 
-<!--    NOVA INCIDENCIA-->
-    <dimen name="incidencia_large">34sp</dimen>
-    <dimen name="incidencia_medium">30sp</dimen>
+    <!--    NOVA INCIDENCIA-->
+
 </resources>
