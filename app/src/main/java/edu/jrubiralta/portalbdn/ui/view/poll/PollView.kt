@@ -4,4 +4,5 @@ import edu.jrubiralta.portalbdn.ui.view.View
 
 interface PollView
     : View {
+
 }

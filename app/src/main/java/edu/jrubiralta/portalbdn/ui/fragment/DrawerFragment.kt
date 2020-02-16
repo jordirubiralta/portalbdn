@@ -78,11 +78,11 @@ class DrawerFragment :
 
     override fun onServiceSelection(menuItemView: MenuItemView) {
         when (menuItemView.type) {
-            MenuType.HOME -> (activity!! as HomeListener)?.openHomeFragment()
-            MenuType.NEWS -> (activity!! as HomeListener)?.openNewsFragment()
-            MenuType.CALENDAR -> (activity!! as HomeListener)?.openCalendarFragment()
-            MenuType.POLLS -> (activity!! as HomeListener)?.openPollFragment()
-            MenuType.INCIDENTS -> (activity!! as HomeListener)?.openIncidentsFragment()
+            MenuType.HOME -> (activity!! as HomeListener).openHomeFragment()
+            MenuType.NEWS -> (activity!! as HomeListener).openNewsFragment()
+            MenuType.CALENDAR -> (activity!! as HomeListener).openCalendarFragment()
+            MenuType.POLLS -> (activity!! as HomeListener).openPollFragment()
+            MenuType.INCIDENTS -> (activity!! as HomeListener).openIncidentsFragment()
         }
     }
 

@@ -14,8 +14,10 @@ class DrawerListAdapter(onItemClick: (MenuItemView) -> Unit)
 
     class MenuItemViewHolder(itemView: View) : BaseViewHolder<MenuItemView>(itemView) {
         override fun bind(model: MenuItemView) {
-            itemView.icon.setImageResource(model.iconId)
-            itemView.name.setText(model.name)
+            itemView.apply {
+                icon.setImageResource(model.iconId)
+                name.setText(model.name)
+            }
         }
     }
 }

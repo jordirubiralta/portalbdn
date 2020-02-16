@@ -56,11 +56,10 @@ class HomeActivity
     private fun initListeners() {
         bt_menu.setOnClickListener { presenter.moveDrawer() }
         bt_add.setOnClickListener { Navigator.openNewIncident(NavParams(this@HomeActivity, false)) }
-
     }
 
     private fun initData() {
-        replaceFragment(R.id.fragment_container, PollFragment.newInstance())
+        replaceFragment(R.id.fragment_container, NewsFragment.newInstance())
     }
 
     override fun onBackPressed() {
@@ -72,7 +71,7 @@ class HomeActivity
     }
 
     override fun openHomeFragment() {
-        val fragment = PollFragment.newInstance()
+        val fragment = NewsFragment.newInstance()
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.inici)
         presenter.moveDrawer()

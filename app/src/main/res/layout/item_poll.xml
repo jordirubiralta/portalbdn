@@ -8,7 +8,10 @@
     android:paddingStart="@dimen/button_padding_horizontal"
     android:paddingTop="@dimen/dimen_24"
     android:paddingEnd="@dimen/button_padding_horizontal"
-    android:paddingBottom="@dimen/dimen_24">
+    android:paddingBottom="@dimen/dimen_24"
+    android:layout_marginTop="@dimen/dimen_12"
+    android:layout_marginBottom="@dimen/dimen_12"
+    android:elevation="3dp">
 
     <TextView
         android:id="@+id/tv_poll_question"
@@ -17,42 +20,71 @@
         android:inputType="textMultiLine"
         android:textColor="@color/darkx_grey"
         android:textSize="@dimen/text_small"
+        android:fontFamily="@font/highwaygothicnarrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Creus que hauriem d'afegir cendrés a les escombraries?" />
 
-    <TextView
-        android:id="@+id/tv_poll_yes"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_like"
         android:layout_marginTop="@dimen/dimen_24"
-        android:background="@drawable/zz_poll_button"
-        android:inputType="textMultiLine"
-        android:gravity="center"
-        android:textColor="@color/darkx_grey"
-        android:textSize="@dimen/text_small"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_poll_question"
-        tools:text="SI" />
+        android:tint="@color/darkx_grey"/>
 
-    <TextView
-        android:id="@+id/tv_poll_no"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
+    <ImageView
+        android:id="@+id/dislike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dislike"
         android:layout_marginTop="@dimen/dimen_24"
-        android:background="@drawable/zz_poll_button"
-        android:inputType="textMultiLine"
-        android:gravity="center"
-        android:textColor="@color/darkx_grey"
-        android:textSize="@dimen/text_small"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/tv_poll_question"
-        tools:text="NO" />
+        android:tint="@color/darkx_grey"/>
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_poll_yes"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_marginTop="@dimen/dimen_24"-->
+<!--        android:background="@drawable/zz_poll_button"-->
+<!--        android:inputType="textMultiLine"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/darkx_grey"-->
+<!--        android:textSize="@dimen/text_small"-->
+<!--        android:fontFamily="@font/highwaygothicnarrow"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/guideline"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_poll_question"-->
+<!--        android:text="SI" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_poll_no"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_marginTop="@dimen/dimen_24"-->
+<!--        android:background="@drawable/zz_poll_button"-->
+<!--        android:inputType="textMultiLine"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/darkx_grey"-->
+<!--        android:textSize="@dimen/text_small"-->
+<!--        android:fontFamily="@font/highwaygothicnarrow"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guideline"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_poll_question"-->
+<!--        android:text="NO" />-->
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
