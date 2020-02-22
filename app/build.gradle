@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
     defaultConfig {
-        applicationId "edu.jrubiralta.portalbdn"
+        applicationId "com.jrubiralta.portalbdn"
         minSdkVersion rootProject.ext.androidMinSdkVersion
         targetSdkVersion rootProject.androidTargetSdkVersion
         versionCode rootProject.ext.versionCode
@@ -31,7 +31,7 @@ dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     implementation appDependencies.appCompat_v7
     implementation appDependencies.design
