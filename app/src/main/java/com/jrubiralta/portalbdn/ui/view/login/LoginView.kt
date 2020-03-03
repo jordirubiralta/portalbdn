@@ -7,5 +7,7 @@ interface LoginView
     : View {
 
     fun loginSuccess(user: User)
+    fun loginError(username: Boolean, password: Boolean)
+    fun printErrorMessage(error: String?)
 
 }

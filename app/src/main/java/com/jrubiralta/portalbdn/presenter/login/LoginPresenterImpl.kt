@@ -23,7 +23,8 @@ class LoginPresenterImpl(
                     Log.d("SUCCESS", it.toString())
                 },
                 onError = {
-                    Log.d("ERROR", it.toString())
+                    view.printErrorMessage(it.message)
+                    view.loginError(true, true)
                 }
         )
     }

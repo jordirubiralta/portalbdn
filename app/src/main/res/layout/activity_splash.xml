@@ -27,7 +27,7 @@
         android:layout_marginBottom="@dimen/splash_margins"
         android:text="@string/autor"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_medium"
+        android:textSize="@dimen/login_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

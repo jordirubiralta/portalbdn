@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -45,10 +46,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@color/white"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
             android:fontFamily="@font/highwaygothicnarrow"
             android:hint="@string/username_hint"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/text_small" />
+            android:textSize="@dimen/text_small"
+            android:nextFocusDown="@id/et_password"/>
 
     </LinearLayout>
 
@@ -85,7 +90,8 @@
             android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/text_small" />
+            android:textSize="@dimen/text_small"
+            android:nextFocusDown="@id/btn_login"/>
 
     </LinearLayout>
 
@@ -100,6 +106,21 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_password" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_12"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        android:textColor="@color/red"
+        android:textSize="@dimen/login_secondary"
+        android:visibility="gone"
+        android:textStyle="italic"
+        android:fontFamily="@font/highwaygothicnarrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot" />
 
 
     <Button

@@ -1,9 +1,6 @@
 package com.jrubiralta.data.network
 
-import com.jrubiralta.data.model.IncidenciaRequestDto
-import com.jrubiralta.data.model.IncidenciesDto
-import com.jrubiralta.data.model.SigninDto
-import com.jrubiralta.data.model.UserDto
+import com.jrubiralta.data.model.*
 import io.reactivex.Single
 import retrofit2.http.*
 
@@ -16,6 +13,10 @@ interface ApiService {
     @Headers("Content-Type: application/json")
     @POST("signin")
     fun signin(@Body request: SigninDto): Single<UserDto>
+
+    @Headers("Content-Type: application/json")
+    @POST("signup")
+    fun signup(@Body request: SignupDto): Single<UserDto>
 
     @Headers("Content-Type: application/json")
     @POST("incidencies")

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -31,6 +32,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_logo">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.30" />
+
         <EditText
             android:id="@+id/et_name"
             android:layout_width="0dp"
@@ -39,12 +47,16 @@
             android:background="@color/white"
             android:fontFamily="@font/highwaygothicnarrow"
             android:hint="@string/name"
+            android:lines="1"
+            android:maxLines="1"
+            android:nextFocusRight="@id/et_surname"
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
+            android:singleLine="true"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/text_small"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/et_surname"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,6 +70,10 @@
             android:hint="@string/surname"
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:nextFocusDown="@id/et_password"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/text_small"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -93,6 +109,10 @@
             android:inputType="textPassword"
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:nextFocusRight="@id/et_age"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/text_small" />
 
@@ -132,6 +152,10 @@
             android:inputType="number"
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:nextFocusDown="@id/et_mail"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/text_small" />
 
@@ -163,6 +187,10 @@
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:nextFocusDown="@id/et_mail_repeat"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/text_small" />
 
@@ -194,13 +222,32 @@
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/dimen_8"
             android:paddingEnd="@dimen/dimen_8"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:nextFocusDown="@id/btn_register"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/text_small" />
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_12"
+        android:textColor="@color/red"
+        android:textSize="@dimen/login_secondary"
+        android:visibility="gone"
+        android:textStyle="italic"
+        android:fontFamily="@font/highwaygothicnarrow"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_mail_repeat" />
+
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_register"
         style="@style/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

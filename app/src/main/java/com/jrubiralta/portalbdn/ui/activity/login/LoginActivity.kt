@@ -1,6 +1,8 @@
 package com.jrubiralta.portalbdn.ui.activity.login
 
 import android.os.Bundle
+import android.view.View
+import androidx.core.content.ContextCompat
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
@@ -53,7 +55,17 @@ class LoginActivity
             Navigator.openRegisterPage(NavParams(this, false))
         }
         btn_login.setOnClickListener {
-            presenter.signin(et_username.text.toString(), et_password.text.toString())
+            var username = et_username.text.toString()
+            var password = et_password.text.toString()
+            if (!username.isNullOrEmpty() && !password.isNullOrEmpty())
+                presenter.signin(username, password)
+            else {
+                tv_error.apply {
+                    visibility = View.VISIBLE
+                    text = getString(R.string.error_message)
+                }
+                loginError(username.isNullOrEmpty(), password.isNullOrEmpty())
+            }
         }
     }
 
@@ -67,4 +79,29 @@ class LoginActivity
         Navigator.openHomePage(NavParams(this, true))
     }
 
+    override fun loginError(username: Boolean, password: Boolean) {
+        if (username) {
+            ll_username.background = getDrawable(R.drawable.zz_edittext_wrong)
+            iv_username.setColorFilter(ContextCompat.getColor(getCtx(), R.color.red))
+        } else {
+            ll_password.background = getDrawable(R.drawable.zz_edittext_background)
+            iv_password.setColorFilter(ContextCompat.getColor(getCtx(), R.color.colorPrimary))
+        }
+        if (password) {
+            ll_password.background = getDrawable(R.drawable.zz_edittext_wrong)
+            iv_password.setColorFilter(ContextCompat.getColor(getCtx(), R.color.red))
+        }  else {
+            ll_password.background = getDrawable(R.drawable.zz_edittext_background)
+            iv_password.setColorFilter(ContextCompat.getColor(getCtx(), R.color.colorPrimary))
+        }
+    }
+
+    override fun printErrorMessage(error: String?) {
+        error?.let { message ->
+            tv_error.apply {
+                visibility = View.VISIBLE
+                text = message
+            }
+        }
+    }
 }

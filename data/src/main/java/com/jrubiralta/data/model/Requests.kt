@@ -7,6 +7,14 @@ data class SigninDto(
         @SerializedName("password") val password: String
 )
 
+data class SignupDto(
+        @SerializedName("email") val email: String,
+        @SerializedName("password") val password: String,
+        @SerializedName("name") val name: String,
+        @SerializedName("surname") val surname: String,
+        @SerializedName("age") val age: Int
+)
+
 data class IncidenciaRequestDto(
         @SerializedName("user_id") val userId: String
 )

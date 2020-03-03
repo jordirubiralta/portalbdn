@@ -8,4 +8,5 @@ import com.jrubiralta.portalbdn.ui.view.splash.SplashView
 interface RegisterPresenter
     : BasePresenter<RegisterView> {
 
+    fun signup(email: String, password: String, name: String, surname: String, age: Int)
 }

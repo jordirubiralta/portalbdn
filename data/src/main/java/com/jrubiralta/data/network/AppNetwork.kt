@@ -1,9 +1,6 @@
 package com.jrubiralta.data.network
 
-import com.jrubiralta.data.model.IncidenciaRequestDto
-import com.jrubiralta.data.model.IncidenciesDto
-import com.jrubiralta.data.model.SigninDto
-import com.jrubiralta.data.model.UserDto
+import com.jrubiralta.data.model.*
 import io.reactivex.Single
 
 class AppNetwork(
@@ -12,6 +9,10 @@ class AppNetwork(
 
     override fun signin(request: SigninDto): Single<UserDto> {
         return apiService.signin(request)
+    }
+
+    override fun signup(request: SignupDto): Single<UserDto> {
+        return apiService.signup(request)
     }
 
     override fun getIncidencies(): Single<List<IncidenciesDto>> {

@@ -21,6 +21,7 @@
     <string name="register_text">Encara no tens usuari?</string>
     <string name="register_option">Registra\'t!</string>
     <string name="forgot_option">Has oblidat la teva contrasenya?</string>
+    <string name="error_message">Falta omplir algun camp</string>
 
     <!--    REGISTER-->
     <string name="register_title">Registra\'t</string>
@@ -32,6 +33,7 @@
     <string name="mail_2">Repetir correu electrònic</string>
     <string name="have_user">Ja tens usuari?</string>
     <string name="do_login">Inicia sessió</string>
+    <string name="error_repeat_mail">Els emails són diferents</string>
 
     <!--    Nova incidencia-->
     <string name="incidencia_title">Títol</string>
