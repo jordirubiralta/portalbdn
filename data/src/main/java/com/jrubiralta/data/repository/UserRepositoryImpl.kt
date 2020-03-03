@@ -6,14 +6,16 @@ import com.jrubiralta.data.network.Network
 import com.jrubiralta.domain.model.Incidencia
 import com.jrubiralta.domain.model.User
 import com.jrubiralta.domain.repository.IncidenciesRepository
+import com.jrubiralta.domain.repository.UserRepository
 import io.reactivex.Single
 
-class IncidenciesRepositoryImpl(
-    private val network: Network
+class UserRepositoryImpl(
+        private val network: Network
 )
-    : IncidenciesRepository {
+    : UserRepository {
 
-
-    override fun getIncidencies(): Single<List<Incidencia>> =
-        network.getIncidencies().map { it.map { it.toModel() } }
+    override fun signin(email: String, password: String): Single<User> {
+        val request = SigninDto(email, password)
+        return network.signin(request).map { it.toModel() }
+    }
 }

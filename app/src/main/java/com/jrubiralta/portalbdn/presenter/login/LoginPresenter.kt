@@ -6,4 +6,5 @@ import com.jrubiralta.portalbdn.ui.view.login.LoginView
 interface LoginPresenter
     : BasePresenter<LoginView> {
 
+    fun signin(email: String, password: String)
 }

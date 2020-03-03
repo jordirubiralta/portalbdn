@@ -3,11 +3,12 @@ package com.jrubiralta.data.model
 import com.google.gson.annotations.SerializedName
 
 class IncidenciesDto(
-    @SerializedName("titol") val titol: String? = null,
-    @SerializedName("descripcio") val descripcio: String? = null,
-    @SerializedName("data") val data: String? = null,
-    @SerializedName("hora") val hora: String? = null,
-    @SerializedName("ubicacio") val ubicacio: String? = null,
-    @SerializedName("resolt") val resolt: Boolean? = null) {
+        @SerializedName("_id") val id: String? = null,
+        @SerializedName("user_id") val userId: String? = null,
+        @SerializedName("title") val titol: String? = null,
+        @SerializedName("description") val descripcio: String? = null,
+        @SerializedName("date") val data: String? = null,
+        @SerializedName("location") val ubicacio: String? = null,
+        @SerializedName("resolved") val resolt: Boolean? = null) {
 
 }

@@ -5,6 +5,7 @@ import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
+import com.jrubiralta.domain.model.User
 import com.jrubiralta.portalbdn.Navigator.Navigator
 import com.jrubiralta.portalbdn.Navigator.android.NavParams
 import com.jrubiralta.portalbdn.R
@@ -26,7 +27,8 @@ class LoginActivity
     override val activityModule: Kodein.Module = Kodein.Module {
         bind<LoginPresenter>() with provider {
             LoginPresenterImpl(
-                    view = this@LoginActivity
+                    view = this@LoginActivity,
+                    signInUseCase = instance()
             )
         }
     }
@@ -51,7 +53,7 @@ class LoginActivity
             Navigator.openRegisterPage(NavParams(this, false))
         }
         btn_login.setOnClickListener {
-            Navigator.openHomePage(NavParams(this, true))
+            presenter.signin(et_username.text.toString(), et_password.text.toString())
         }
     }
 
@@ -59,6 +61,10 @@ class LoginActivity
     }
 
     override fun onBackPressed() {
+    }
+
+    override fun loginSuccess(user: User) {
+        Navigator.openHomePage(NavParams(this, true))
     }
 
 }
