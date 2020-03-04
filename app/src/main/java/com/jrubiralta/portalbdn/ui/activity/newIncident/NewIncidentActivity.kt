@@ -11,6 +11,8 @@ import com.jrubiralta.portalbdn.presenter.incident.NewIncidentPresenter
 import com.jrubiralta.portalbdn.presenter.incident.NewIncidentPresenterImpl
 import com.jrubiralta.portalbdn.ui.activity.BaseActivity
 import com.jrubiralta.portalbdn.ui.view.incident.NewIncidentView
+import com.jrubiralta.portalbdn.utils.gone
+import com.jrubiralta.portalbdn.utils.visible
 import kotlinx.android.synthetic.main.view_toolbar.*
 
 class NewIncidentActivity
@@ -43,8 +45,8 @@ class NewIncidentActivity
     private fun initView() {
         setContentView(layoutResourceId)
         toolbar_title.setText(R.string.nova_incidencia)
-        bt_back.visibility = View.VISIBLE
-        bt_menu.visibility = View.GONE
+        bt_back.visible()
+        bt_menu.gone()
     }
 
     private fun initListeners() {

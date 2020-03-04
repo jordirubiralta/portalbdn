@@ -17,6 +17,7 @@ import com.jrubiralta.portalbdn.presenter.registre.RegisterPresenterImpl
 import com.jrubiralta.portalbdn.ui.activity.BaseActivity
 import com.jrubiralta.portalbdn.ui.view.login.LoginView
 import com.jrubiralta.portalbdn.ui.view.registre.RegisterView
+import com.jrubiralta.portalbdn.utils.visible
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_register.et_password
@@ -76,12 +77,12 @@ class RegisterActivity
                 ll_mail.background = getDrawable(R.drawable.zz_edittext_wrong)
                 ll_mail_repeat.background = getDrawable(R.drawable.zz_edittext_wrong)
                 tv_error.apply {
-                    visibility = View.VISIBLE
+                    this.visible()
                     text = getString(R.string.error_repeat_mail)
                 }
             } else {
                 tv_error.apply {
-                    visibility = View.VISIBLE
+                    this.visible()
                     text = getString(R.string.error_message)
                 }
                 registerError(name.isNullOrEmpty(), surname.isNullOrEmpty(), email.isNullOrEmpty(),

@@ -19,6 +19,7 @@ import com.jrubiralta.portalbdn.ui.fragment.menu.DrawerFragment
 import com.jrubiralta.portalbdn.ui.fragment.news.NewsFragment
 import com.jrubiralta.portalbdn.ui.fragment.poll.PollFragment
 import com.jrubiralta.portalbdn.ui.view.home.HomeView
+import com.jrubiralta.portalbdn.utils.visible
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.view_toolbar.*
 
@@ -111,7 +112,7 @@ class HomeActivity
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.incidencies)
         presenter.moveDrawer()
-        bt_add.visibility = View.VISIBLE
+        bt_add.visible()
     }
 
 }

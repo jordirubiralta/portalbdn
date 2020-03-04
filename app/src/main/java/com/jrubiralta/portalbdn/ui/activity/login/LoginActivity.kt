@@ -15,6 +15,7 @@ import com.jrubiralta.portalbdn.presenter.login.LoginPresenter
 import com.jrubiralta.portalbdn.presenter.login.LoginPresenterImpl
 import com.jrubiralta.portalbdn.ui.activity.BaseActivity
 import com.jrubiralta.portalbdn.ui.view.login.LoginView
+import com.jrubiralta.portalbdn.utils.visible
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity
@@ -61,7 +62,7 @@ class LoginActivity
                 presenter.signin(username, password)
             else {
                 tv_error.apply {
-                    visibility = View.VISIBLE
+                    this.visible()
                     text = getString(R.string.error_message)
                 }
                 loginError(username.isNullOrEmpty(), password.isNullOrEmpty())
@@ -99,7 +100,7 @@ class LoginActivity
     override fun printErrorMessage(error: String?) {
         error?.let { message ->
             tv_error.apply {
-                visibility = View.VISIBLE
+                this.visible()
                 text = message
             }
         }
