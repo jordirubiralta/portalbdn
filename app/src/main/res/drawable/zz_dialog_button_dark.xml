@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="@dimen/button_height" />
+            <solid android:color="@color/colorPrimary" />
+            <corners android:bottomLeftRadius="8dp" />
+        </shape>
+    </item>
+</layer-list>

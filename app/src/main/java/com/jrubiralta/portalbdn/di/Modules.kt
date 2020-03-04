@@ -51,7 +51,7 @@ val dataModule = Kodein.Module {
     }
     //Data sources
     //Repository
-    bind<UserRepository>() with singleton { UserRepositoryImpl(network = instance()) }
-    bind<IncidenciesRepository>() with singleton { IncidenciesRepositoryImpl(network = instance()) }
+    bind<UserRepository>() with singleton { UserRepositoryImpl(network = instance(), persistence = instance()) }
+    bind<IncidenciesRepository>() with singleton { IncidenciesRepositoryImpl(network = instance(), persistence = instance()) }
 
 }

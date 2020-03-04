@@ -10,6 +10,7 @@
     <string name="calendari">Calendari</string>
     <string name="enquestes">Enquestes</string>
     <string name="incidencies">Incidències</string>
+    <string name="logout">Tancar sessió</string>
 
     <string name="nova_incidencia">Nova Incidències</string>
 
@@ -43,7 +44,6 @@
     <string name="incidencia_location">On es troba aquest problema?</string>
     <string name="incidencia_location_hint">Cantonada carrer del Mar amb la Rambla</string>
     <string name="btn_new_incidencia">Afegir</string>
-
 
 
 </resources>

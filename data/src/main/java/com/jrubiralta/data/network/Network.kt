@@ -1,9 +1,6 @@
 package com.jrubiralta.data.network
 
-import com.jrubiralta.data.model.IncidenciesDto
-import com.jrubiralta.data.model.SigninDto
-import com.jrubiralta.data.model.SignupDto
-import com.jrubiralta.data.model.UserDto
+import com.jrubiralta.data.model.*
 import io.reactivex.Single
 
 
@@ -11,6 +8,6 @@ interface Network {
 
     fun signin(request: SigninDto) : Single<UserDto>
     fun signup(request: SignupDto) : Single<UserDto>
-    fun getIncidencies() : Single<List<IncidenciesDto>>
+    fun getIncidencies(token: String, request: IncidenciaRequestDto) : Single<List<IncidenciesDto>>
 
 }

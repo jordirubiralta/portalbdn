@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--    DIALOG-->
+    <dimen name="padding_dialog">20dp</dimen>
+    <dimen name="button_height">40dp</dimen>
+
+
+
     <!--    TEXT-->
     <dimen name="login_secondary">16sp</dimen>
     <dimen name="text_small">20sp</dimen>

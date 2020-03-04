@@ -4,12 +4,15 @@ import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.ScrollView
+import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
+import com.jrubiralta.portalbdn.Navigator.Navigator
+import com.jrubiralta.portalbdn.Navigator.android.NavParams
 import com.jrubiralta.portalbdn.R
 import com.jrubiralta.portalbdn.domain.constants.Screen
 import com.jrubiralta.portalbdn.model.MenuItem
@@ -18,6 +21,7 @@ import com.jrubiralta.portalbdn.presenter.menu.DrawerPresenter
 import com.jrubiralta.portalbdn.presenter.menu.DrawerPresenterImpl
 import com.jrubiralta.portalbdn.ui.activity.home.HomeListener
 import com.jrubiralta.portalbdn.ui.adapter.DrawerListAdapter
+import com.jrubiralta.portalbdn.ui.dialog.LogOutDialog
 import com.jrubiralta.portalbdn.ui.fragment.BaseFragment
 import com.jrubiralta.portalbdn.ui.view.menu.DrawerView
 import kotlinx.android.synthetic.main.fragment_drawer.*
@@ -71,6 +75,13 @@ class DrawerFragment :
     }
 
     private fun initListeners() {
+        cl_logout.setOnClickListener {
+            LogOutDialog.newInstance(object : LogOutDialog.LogoutDialogListener {
+                override fun onOkClicked() {
+                    presenter.doLogout()
+                }
+            })
+        }
 
     }
 
@@ -96,5 +107,9 @@ class DrawerFragment :
         list.add(MenuItem(screen = Screen.POLLS, iconId = R.drawable.ic_poll, name = R.string.enquestes, type = MenuType.POLLS))
         list.add(MenuItem(screen = Screen.INCIDENTS, iconId = R.drawable.ic_problems, name = R.string.incidencies, type = MenuType.INCIDENTS))
         drawerListAdapter.replace(list)
+    }
+
+    override fun navigateToLogin() {
+        Navigator.openLoginPage(NavParams(requireActivity(), true))
     }
 }

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zz_card_background"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_dialog"
+            android:paddingStart="@dimen/padding_dialog"
+            android:paddingEnd="@dimen/padding_dialog"
+            android:textSize="@dimen/text_medium"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/highwaygothicnarrow"
+            android:text="@string/logout" />
+
+        <TextView
+            android:id="@+id/dialog_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_dialog"
+            android:paddingBottom="@dimen/padding_dialog"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding_dialog"
+            android:paddingEnd="@dimen/padding_dialog"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_title"
+            android:fontFamily="@font/highwaygothicnarrow"
+            android:text="Estàs segur que vols tancar la sessió?" />
+
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/zz_dialog_button_light"
+            android:gravity="center"
+            android:textColor="@color/darkx_grey"
+            android:textSize="@dimen/text_small"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/btn_ok"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_description"
+            android:fontFamily="@font/highwaygothicnarrow"
+            android:text="NO" />
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/zz_dialog_button_dark"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_cancel"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_description"
+            android:fontFamily="@font/highwaygothicnarrow"
+            android:text="SI" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

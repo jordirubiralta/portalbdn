@@ -8,4 +8,6 @@ interface DrawerView
 
     fun onViewStart()
     fun onServiceSelection(menuItem: MenuItem)
+
+    fun navigateToLogin()
 }

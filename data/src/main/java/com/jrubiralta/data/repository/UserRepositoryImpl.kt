@@ -8,10 +8,12 @@ import com.jrubiralta.domain.model.Incidencia
 import com.jrubiralta.domain.model.User
 import com.jrubiralta.domain.repository.IncidenciesRepository
 import com.jrubiralta.domain.repository.UserRepository
+import com.jrubiralta.portalbdn.persistence.Persistence
 import io.reactivex.Single
 
 class UserRepositoryImpl(
-        private val network: Network)
+        private val network: Network,
+        private val persistence: Persistence)
     : UserRepository {
 
     override fun signin(email: String, password: String): Single<User> {

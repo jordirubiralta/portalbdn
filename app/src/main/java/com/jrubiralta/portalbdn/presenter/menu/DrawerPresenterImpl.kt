@@ -19,4 +19,9 @@ class DrawerPresenterImpl(
         view.onServiceSelection(menuItem)
     }
 
+    override fun doLogout() {
+        logout()
+        view.navigateToLogin()
+    }
+
 }

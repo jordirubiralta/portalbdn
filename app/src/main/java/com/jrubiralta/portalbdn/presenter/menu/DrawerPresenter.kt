@@ -9,4 +9,5 @@ interface DrawerPresenter
 
     fun onViewStart()
     fun serviceSelected(menuItem: MenuItem)
+    fun doLogout()
 }
