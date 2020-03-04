@@ -75,13 +75,6 @@ class DrawerFragment :
     }
 
     private fun initListeners() {
-        cl_logout.setOnClickListener {
-            LogOutDialog.newInstance(object : LogOutDialog.LogoutDialogListener {
-                override fun onOkClicked() {
-                    presenter.doLogout()
-                }
-            })
-        }
 
     }
 
