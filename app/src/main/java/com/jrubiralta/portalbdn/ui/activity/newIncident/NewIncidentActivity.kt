@@ -26,7 +26,8 @@ class NewIncidentActivity
     override val activityModule: Kodein.Module = Kodein.Module {
         bind<NewIncidentPresenter>() with provider {
             NewIncidentPresenterImpl(
-                    view = this@NewIncidentActivity
+                    view = this@NewIncidentActivity,
+                    persistence = instance()
             )
         }
     }

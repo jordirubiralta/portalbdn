@@ -33,7 +33,8 @@ class CalendarFragment :
     override val fragmentModule: Kodein.Module = Kodein.Module {
         bind<CalendarPresenter>() with provider {
             CalendarPresenterImpl(
-                    view = this@CalendarFragment
+                    view = this@CalendarFragment,
+                    persistence = instance()
             )
         }
     }

@@ -3,6 +3,7 @@ package com.jrubiralta.portalbdn.di
 import android.content.Context
 import com.github.salomonbrys.kodein.*
 import com.jrubiralta.data.network.*
+import com.jrubiralta.data.persistence.PortalPreferences
 import com.jrubiralta.data.repository.IncidenciesRepositoryImpl
 import com.jrubiralta.data.repository.UserRepositoryImpl
 import com.jrubiralta.domain.interactor.incidencies.GetIncidenciesUseCase
@@ -12,9 +13,11 @@ import com.jrubiralta.domain.repository.IncidenciesRepository
 import com.jrubiralta.domain.repository.UserRepository
 import com.jrubiralta.portalbdn.BuildConfig
 import com.jrubiralta.portalbdn.domain.constants.BuildType
+import com.jrubiralta.portalbdn.domain.constants.Constants
 import com.jrubiralta.portalbdn.domain.constants.buildType
 import com.jrubiralta.portalbdn.domain.executor.Executor
 import com.jrubiralta.portalbdn.executor.RxExecutor
+import com.jrubiralta.portalbdn.persistence.Persistence
 
 /**
  * Modules
@@ -35,6 +38,10 @@ val domainModule = Kodein.Module {
 
 val dataModule = Kodein.Module {
     //Preferences
+    bind<Persistence>() with singleton {
+        PortalPreferences(context = instance(), name = Constants.preferencesName(buildType = instance()))
+    }
+
     //Database
     //Api Services
     bind<Network>() with singleton {

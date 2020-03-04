@@ -38,6 +38,7 @@ class RegisterActivity
         bind<RegisterPresenter>() with provider {
             RegisterPresenterImpl(
                     view = this@RegisterActivity,
+                    persistence = instance(),
                     signUpUseCase = instance()
             )
         }
@@ -67,12 +68,12 @@ class RegisterActivity
             var surname = et_surname.text.toString()
             var email = et_mail.text.toString()
             var emailRepeat = et_mail_repeat.text.toString()
-            var age = et_age.text.toString().toInt()
+            var age = et_age.text.toString()
             var password = et_password.text.toString()
             if (!name.isNullOrEmpty() && !surname.isNullOrEmpty() && !email.isNullOrEmpty() &&
-                    !emailRepeat.isNullOrEmpty() && age != null && !password.isNullOrEmpty() &&
+                    !emailRepeat.isNullOrEmpty() && !age.isNullOrEmpty() && !password.isNullOrEmpty() &&
                     email == emailRepeat) {
-                presenter.signup(email, password, name, surname, age)
+                presenter.signup(email, password, name, surname, age.toInt())
             } else if (email != emailRepeat) {
                 ll_mail.background = getDrawable(R.drawable.zz_edittext_wrong)
                 ll_mail_repeat.background = getDrawable(R.drawable.zz_edittext_wrong)
@@ -86,7 +87,7 @@ class RegisterActivity
                     text = getString(R.string.error_message)
                 }
                 registerError(name.isNullOrEmpty(), surname.isNullOrEmpty(), email.isNullOrEmpty(),
-                        emailRepeat.isNullOrEmpty(), password.isNullOrEmpty(), age == null)
+                        emailRepeat.isNullOrEmpty(), password.isNullOrEmpty(), age.isNullOrEmpty())
             }
         }
     }

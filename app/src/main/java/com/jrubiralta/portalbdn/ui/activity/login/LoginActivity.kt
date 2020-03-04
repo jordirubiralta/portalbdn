@@ -1,7 +1,6 @@
 package com.jrubiralta.portalbdn.ui.activity.login
 
 import android.os.Bundle
-import android.view.View
 import androidx.core.content.ContextCompat
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
@@ -31,6 +30,7 @@ class LoginActivity
         bind<LoginPresenter>() with provider {
             LoginPresenterImpl(
                     view = this@LoginActivity,
+                    persistence = instance(),
                     signInUseCase = instance()
             )
         }

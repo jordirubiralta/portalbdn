@@ -35,7 +35,8 @@ class HomeActivity
     override val activityModule: Kodein.Module = Kodein.Module {
         bind<HomePresenter>() with provider {
             HomePresenterImpl(
-                    view = this@HomeActivity
+                    view = this@HomeActivity,
+                    persistence = instance()
             )
         }
     }
@@ -62,6 +63,7 @@ class HomeActivity
     }
 
     private fun initData() {
+        presenter.getData()
     }
 
     override fun onBackPressed() {

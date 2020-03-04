@@ -34,7 +34,8 @@ class NewsFragment :
     override val fragmentModule: Kodein.Module = Kodein.Module {
         bind<NewsPresenter>() with provider {
             NewsPresenterImpl(
-                    view = this@NewsFragment
+                    view = this@NewsFragment,
+                    persistence = instance()
             )
         }
     }

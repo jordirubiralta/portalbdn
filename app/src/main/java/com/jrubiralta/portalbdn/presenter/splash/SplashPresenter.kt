@@ -5,6 +5,4 @@ import com.jrubiralta.portalbdn.ui.view.splash.SplashView
 
 interface SplashPresenter
     : BasePresenter<SplashView> {
-
-    fun getIncidencies()
 }

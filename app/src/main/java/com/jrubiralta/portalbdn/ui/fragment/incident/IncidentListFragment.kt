@@ -37,7 +37,8 @@ class IncidentListFragment :
     override val fragmentModule: Kodein.Module = Kodein.Module {
         bind<IncidentListPresenter>() with provider {
             IncidentListPresenterImpl(
-                    view = this@IncidentListFragment
+                    view = this@IncidentListFragment,
+                    persistence = instance()
             )
         }
     }

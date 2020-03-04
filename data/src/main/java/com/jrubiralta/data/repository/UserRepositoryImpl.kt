@@ -11,8 +11,7 @@ import com.jrubiralta.domain.repository.UserRepository
 import io.reactivex.Single
 
 class UserRepositoryImpl(
-        private val network: Network
-)
+        private val network: Network)
     : UserRepository {
 
     override fun signin(email: String, password: String): Single<User> {

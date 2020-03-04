@@ -43,7 +43,8 @@ class DrawerFragment :
     override val fragmentModule: Kodein.Module = Kodein.Module {
         bind<DrawerPresenter>() with provider {
             DrawerPresenterImpl(
-                    view = this@DrawerFragment
+                    view = this@DrawerFragment,
+                    persistence = instance()
             )
         }
     }

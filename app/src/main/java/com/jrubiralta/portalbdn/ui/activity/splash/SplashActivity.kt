@@ -1,6 +1,7 @@
 package com.jrubiralta.portalbdn.ui.activity.splash
 
 import android.os.Bundle
+import android.os.Handler
 import com.enel.edist.presenter.splash.SplashPresenterImpl
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
@@ -12,7 +13,7 @@ import com.jrubiralta.portalbdn.R
 import com.jrubiralta.portalbdn.presenter.splash.SplashPresenter
 import com.jrubiralta.portalbdn.ui.activity.BaseActivity
 import com.jrubiralta.portalbdn.ui.view.splash.SplashView
-import kotlinx.android.synthetic.main.activity_splash.*
+
 
 class SplashActivity
     : BaseActivity<SplashPresenter, SplashView>(),
@@ -26,7 +27,7 @@ class SplashActivity
         bind<SplashPresenter>() with provider {
             SplashPresenterImpl(
                     view = this@SplashActivity,
-                    getIncidenciesUseCase = instance()
+                    persistence = instance()
             )
         }
     }
@@ -38,24 +39,24 @@ class SplashActivity
 
     private fun init() {
         initView()
-        initListeners()
         initData()
     }
 
     private fun initView() {
-//        setContentView(layoutResourceId)
-    }
-
-    private fun initListeners() {
-        iv_splash.setOnClickListener {
-            Navigator.openLoginPage(NavParams(this, true))
-            presenter.getIncidencies()
-        }
+        setContentView(layoutResourceId)
     }
 
     private fun initData() {
     }
 
     override fun onBackPressed() {
+    }
+
+    override fun navigateToHome() {
+        Navigator.openHomePage(NavParams(this, true))
+    }
+
+    override fun navigateToLogin() {
+        Navigator.openLoginPage(NavParams(this, true))
     }
 }

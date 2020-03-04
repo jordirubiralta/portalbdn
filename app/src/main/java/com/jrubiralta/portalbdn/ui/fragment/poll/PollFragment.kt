@@ -39,7 +39,8 @@ class PollFragment :
     override val fragmentModule: Kodein.Module = Kodein.Module {
         bind<PollPresenter>() with provider {
             PollPresenterImpl(
-                    view = this@PollFragment
+                    view = this@PollFragment,
+                    persistence = instance()
             )
         }
     }
