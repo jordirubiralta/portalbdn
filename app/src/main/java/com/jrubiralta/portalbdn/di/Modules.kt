@@ -6,6 +6,7 @@ import com.jrubiralta.data.network.*
 import com.jrubiralta.data.persistence.PortalPreferences
 import com.jrubiralta.data.repository.IncidenciesRepositoryImpl
 import com.jrubiralta.data.repository.UserRepositoryImpl
+import com.jrubiralta.domain.interactor.incidencies.AddIncidenciaUseCase
 import com.jrubiralta.domain.interactor.incidencies.GetIncidenciesUseCase
 import com.jrubiralta.domain.interactor.user.SignInUseCase
 import com.jrubiralta.domain.interactor.user.SignUpUseCase
@@ -34,6 +35,7 @@ val domainModule = Kodein.Module {
     bind() from provider { SignInUseCase(repository = instance(), executor = instance()) }
     bind() from provider { SignUpUseCase(repository = instance(), executor = instance()) }
     bind() from provider { GetIncidenciesUseCase(repository = instance(), executor = instance()) }
+    bind() from provider { AddIncidenciaUseCase(repository = instance(), executor = instance()) }
 }
 
 val dataModule = Kodein.Module {

@@ -22,12 +22,12 @@ object Navigator {
 
     fun openHomePage(params: NavParams) {
         val intent = Intent(params.activity, HomeActivity::class.java)
-        openRegisterActivity(params.activity, intent, params.finishActivity)
+        openHomeActivity(params.activity, intent, params.finishActivity)
     }
 
     fun openNewIncidentPage(params: NavParams) {
         val intent = Intent(params.activity, NewIncidentActivity::class.java)
-        openRegisterActivity(params.activity, intent, params.finishActivity)
+        openNewIncidentActivity(params.activity, intent, params.finishActivity)
     }
 
     private fun openLoginActivity(activity: Activity, intent: Intent, finishActivity: Boolean = true) {

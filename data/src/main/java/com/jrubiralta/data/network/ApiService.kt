@@ -22,4 +22,9 @@ interface ApiService {
     @POST("getIncidencies")
     fun getIncidencies(@Header("Authorization") auth: String,
                        @Body user_id: IncidenciaRequestDto): Single<List<IncidenciesDto>>
+
+    @Headers("Content-Type: application/json")
+    @POST("addIncidencia")
+    fun addIncidencia(@Header("Authorization") auth: String,
+                       @Body user_id: NewIncidenciaRequestDto): Single<Unit>
 }

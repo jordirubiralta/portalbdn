@@ -13,13 +13,12 @@
         android:id="@+id/sv_new_incidencia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_activity"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginEnd="@dimen/padding_activity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        android:layout_marginTop="@dimen/dimen_24"
-        android:layout_marginBottom="@dimen/dimen_24"
-        android:layout_marginStart="@dimen/padding_activity"
-        android:layout_marginEnd="@dimen/padding_activity">
+        app:layout_constraintTop_toBottomOf="@+id/include">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -40,9 +39,9 @@
                 android:id="@+id/ll_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
                 android:layout_marginEnd="@dimen/dimen_4"
                 android:background="@drawable/zz_edittext_background"
-                android:layout_marginTop="@dimen/dimen_8"
                 android:paddingStart="@dimen/dimen_2"
                 android:paddingTop="@dimen/dimen_8"
                 android:paddingEnd="@dimen/dimen_2"
@@ -71,9 +70,9 @@
                 android:id="@+id/new_incidencia_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24"
                 android:fontFamily="@font/highwaygothicnarrow"
                 android:text="@string/incidencia_description"
-                android:layout_marginTop="@dimen/dimen_24"
                 android:textColor="@color/darkx_grey"
                 android:textSize="@dimen/text_large"
                 app:layout_constraintStart_toStartOf="parent"
@@ -83,9 +82,9 @@
                 android:id="@+id/ll_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
                 android:layout_marginEnd="@dimen/dimen_4"
                 android:background="@drawable/zz_edittext_background"
-                android:layout_marginTop="@dimen/dimen_8"
                 android:paddingStart="@dimen/dimen_2"
                 android:paddingTop="@dimen/dimen_8"
                 android:paddingEnd="@dimen/dimen_2"
@@ -95,7 +94,7 @@
                 app:layout_constraintTop_toBottomOf="@id/new_incidencia_description">
 
                 <EditText
-                    android:id="@+id/et_mail"
+                    android:id="@+id/et_description"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_gravity="center"
@@ -103,11 +102,11 @@
                     android:fontFamily="@font/highwaygothicnarrow"
                     android:gravity="top"
                     android:hint="@string/incidencia_description_hint"
+                    android:inputType="textMultiLine"
                     android:paddingStart="@dimen/dimen_8"
                     android:paddingEnd="@dimen/dimen_8"
                     android:textColor="@color/darkx_grey"
-                    android:textSize="@dimen/text_small"
-                    android:inputType="textMultiLine" />
+                    android:textSize="@dimen/text_small" />
 
             </LinearLayout>
 
@@ -115,9 +114,9 @@
                 android:id="@+id/new_incidencia_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24"
                 android:fontFamily="@font/highwaygothicnarrow"
                 android:text="@string/incidencia_location"
-                android:layout_marginTop="@dimen/dimen_24"
                 android:textColor="@color/darkx_grey"
                 android:textSize="@dimen/text_small"
                 app:layout_constraintStart_toStartOf="parent"
@@ -127,9 +126,9 @@
                 android:id="@+id/ll_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
                 android:layout_marginEnd="@dimen/dimen_4"
                 android:background="@drawable/zz_edittext_background"
-                android:layout_marginTop="@dimen/dimen_8"
                 android:paddingStart="@dimen/dimen_2"
                 android:paddingTop="@dimen/dimen_8"
                 android:paddingEnd="@dimen/dimen_2"
@@ -147,11 +146,11 @@
                     android:fontFamily="@font/highwaygothicnarrow"
                     android:gravity="top"
                     android:hint="@string/incidencia_location_hint"
+                    android:inputType="textMultiLine"
                     android:paddingStart="@dimen/dimen_8"
                     android:paddingEnd="@dimen/dimen_8"
                     android:textColor="@color/darkx_grey"
-                    android:textSize="@dimen/text_small"
-                    android:inputType="textMultiLine" />
+                    android:textSize="@dimen/text_small" />
 
             </LinearLayout>
 
@@ -159,8 +158,26 @@
 
     </ScrollView>
 
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/highwaygothicnarrow"
+        android:padding="@dimen/dimen_12"
+        android:textColor="@color/red"
+        android:textSize="@dimen/login_secondary"
+        android:textStyle="italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sv_new_incidencia"
+        tools:text="Falten camps per omplir" />
+
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_ok"
         style="@style/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

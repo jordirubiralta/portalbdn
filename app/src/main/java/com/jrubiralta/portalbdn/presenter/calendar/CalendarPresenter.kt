@@ -5,6 +5,4 @@ import com.jrubiralta.portalbdn.ui.view.calendar.CalendarView
 import com.jrubiralta.portalbdn.ui.view.registre.RegisterView
 
 interface CalendarPresenter
-    : BasePresenter<CalendarView> {
-
-}
+    : BasePresenter<CalendarView>

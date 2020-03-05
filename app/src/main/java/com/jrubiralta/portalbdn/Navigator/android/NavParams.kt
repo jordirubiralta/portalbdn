@@ -5,5 +5,4 @@ import android.app.Activity
 
 open class NavParams(
         val activity: Activity,
-        val finishActivity: Boolean = false) {
-}
+        val finishActivity: Boolean = false)

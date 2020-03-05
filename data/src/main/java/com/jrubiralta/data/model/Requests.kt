@@ -18,3 +18,10 @@ data class SignupDto(
 data class IncidenciaRequestDto(
         @SerializedName("user_id") val userId: String
 )
+
+data class NewIncidenciaRequestDto(
+        @SerializedName("user_id") val userId: String,
+        @SerializedName("title") val title: String,
+        @SerializedName("description") val description: String,
+        @SerializedName("location") val location: String
+)

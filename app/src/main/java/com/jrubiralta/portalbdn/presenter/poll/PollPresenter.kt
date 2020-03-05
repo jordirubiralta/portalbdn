@@ -5,6 +5,4 @@ import com.jrubiralta.portalbdn.ui.view.poll.PollView
 import com.jrubiralta.portalbdn.ui.view.registre.RegisterView
 
 interface PollPresenter
-    : BasePresenter<PollView> {
-
-}
+    : BasePresenter<PollView>

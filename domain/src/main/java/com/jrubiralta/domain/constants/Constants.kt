@@ -1,4 +1,4 @@
-package com.jrubiralta.portalbdn.domain.constants;
+package com.jrubiralta.portalbdn.domain.constants
 
 class Constants {
 

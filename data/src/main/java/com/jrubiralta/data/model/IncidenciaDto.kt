@@ -9,6 +9,4 @@ class IncidenciesDto(
         @SerializedName("description") val descripcio: String? = null,
         @SerializedName("date") val data: String? = null,
         @SerializedName("location") val ubicacio: String? = null,
-        @SerializedName("resolved") val resolt: Boolean? = null) {
-
-}
+        @SerializedName("resolved") val resolt: Boolean? = null)

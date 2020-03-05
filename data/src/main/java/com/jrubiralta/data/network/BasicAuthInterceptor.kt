@@ -4,7 +4,7 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import java.io.IOException
 
-class BasicAuthInterceptor()
+class BasicAuthInterceptor
     : AuthInterceptor {
 
     @Throws(IOException::class)

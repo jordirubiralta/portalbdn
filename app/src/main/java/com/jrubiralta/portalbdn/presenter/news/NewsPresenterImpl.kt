@@ -10,5 +10,4 @@ class NewsPresenterImpl(
         view: NewsView,
         persistence: Persistence)
     : BasePresenterImpl<NewsView>(view, persistence),
-        NewsPresenter {
-}
+        NewsPresenter

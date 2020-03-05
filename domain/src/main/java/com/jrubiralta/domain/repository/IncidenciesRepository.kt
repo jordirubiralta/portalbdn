@@ -6,4 +6,5 @@ import io.reactivex.Single
 
 interface IncidenciesRepository {
     fun getIncidencies(): Single<List<Incidencia>>
+    fun addIncidencia(title: String, description: String, location: String): Single<Unit>
 }

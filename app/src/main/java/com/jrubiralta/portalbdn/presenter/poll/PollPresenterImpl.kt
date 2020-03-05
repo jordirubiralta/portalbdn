@@ -10,5 +10,4 @@ class PollPresenterImpl(
         view: PollView,
         persistence: Persistence)
     : BasePresenterImpl<PollView>(view, persistence),
-        PollPresenter {
-}
+        PollPresenter
