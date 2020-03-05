@@ -40,4 +40,7 @@
 
     <!--    NOVA INCIDENCIA-->
 
+<!--    INCIDENCIES-->
+    <dimen name="location_size">15sp</dimen>
+
 </resources>

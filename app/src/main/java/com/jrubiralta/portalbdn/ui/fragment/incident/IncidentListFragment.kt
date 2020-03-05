@@ -3,18 +3,26 @@ package com.jrubiralta.portalbdn.ui.fragment.incident
 
 import android.os.Bundle
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
+import com.jrubiralta.domain.model.Incidencia
 import com.jrubiralta.portalbdn.R
+import com.jrubiralta.portalbdn.model.PollItem
 import com.jrubiralta.portalbdn.presenter.calendar.CalendarPresenter
 import com.jrubiralta.portalbdn.presenter.calendar.CalendarPresenterImpl
 import com.jrubiralta.portalbdn.presenter.incident.IncidentListPresenter
 import com.jrubiralta.portalbdn.presenter.incident.IncidentListPresenterImpl
+import com.jrubiralta.portalbdn.ui.adapter.IncidentAdapter
+import com.jrubiralta.portalbdn.ui.adapter.PollAdapter
 import com.jrubiralta.portalbdn.ui.fragment.BaseFragment
 import com.jrubiralta.portalbdn.ui.view.calendar.CalendarView
 import com.jrubiralta.portalbdn.ui.view.incident.IncidentListView
+import kotlinx.android.synthetic.main.fragment_incidents.*
+import kotlinx.android.synthetic.main.fragment_poll.*
 
 
 class IncidentListFragment :
@@ -38,7 +46,8 @@ class IncidentListFragment :
         bind<IncidentListPresenter>() with provider {
             IncidentListPresenterImpl(
                     view = this@IncidentListFragment,
-                    persistence = instance()
+                    persistence = instance(),
+                    getIncidenciesUseCase = instance()
             )
         }
     }
@@ -56,6 +65,7 @@ class IncidentListFragment :
 
     private fun initViews() {
 
+
     }
 
     private fun initListeners() {
@@ -64,6 +74,13 @@ class IncidentListFragment :
 
     private fun initData() {
 
+    }
+
+    override fun showIncidents(incidentsList: List<Incidencia>) {
+        val incidentAdapter = IncidentAdapter(getCtx())
+        rv_incidents.adapter = incidentAdapter
+        rv_incidents.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        incidentAdapter.replace(incidentsList.toMutableList())
     }
 
 }

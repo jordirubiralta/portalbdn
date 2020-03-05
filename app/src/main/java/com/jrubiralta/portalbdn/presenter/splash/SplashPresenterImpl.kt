@@ -19,7 +19,7 @@ class SplashPresenterImpl(
         val handler = Handler()
         handler.postDelayed( {
             checkIfAccessTokenIsValid()
-        }, 5000)
+        }, 2000)
     }
 
     private fun checkIfAccessTokenIsValid() {
@@ -29,5 +29,4 @@ class SplashPresenterImpl(
             view.navigateToLogin()
         }
     }
-
 }

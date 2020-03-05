@@ -19,7 +19,7 @@ interface ApiService {
     fun signup(@Body request: SignupDto): Single<UserDto>
 
     @Headers("Content-Type: application/json")
-    @POST("incidencies")
+    @POST("getIncidencies")
     fun getIncidencies(@Header("Authorization") auth: String,
                        @Body user_id: IncidenciaRequestDto): Single<List<IncidenciesDto>>
 }
