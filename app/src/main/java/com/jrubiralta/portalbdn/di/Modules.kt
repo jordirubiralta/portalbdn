@@ -5,12 +5,16 @@ import com.github.salomonbrys.kodein.*
 import com.jrubiralta.data.network.*
 import com.jrubiralta.data.persistence.PortalPreferences
 import com.jrubiralta.data.repository.IncidenciesRepositoryImpl
+import com.jrubiralta.data.repository.PollsRepositoryImpl
 import com.jrubiralta.data.repository.UserRepositoryImpl
 import com.jrubiralta.domain.interactor.incidencies.AddIncidenciaUseCase
 import com.jrubiralta.domain.interactor.incidencies.GetIncidenciesUseCase
+import com.jrubiralta.domain.interactor.polls.AnswerPollUseCase
+import com.jrubiralta.domain.interactor.polls.GetPollsUseCase
 import com.jrubiralta.domain.interactor.user.SignInUseCase
 import com.jrubiralta.domain.interactor.user.SignUpUseCase
 import com.jrubiralta.domain.repository.IncidenciesRepository
+import com.jrubiralta.domain.repository.PollsRepository
 import com.jrubiralta.domain.repository.UserRepository
 import com.jrubiralta.portalbdn.BuildConfig
 import com.jrubiralta.portalbdn.domain.constants.BuildType
@@ -36,6 +40,8 @@ val domainModule = Kodein.Module {
     bind() from provider { SignUpUseCase(repository = instance(), executor = instance()) }
     bind() from provider { GetIncidenciesUseCase(repository = instance(), executor = instance()) }
     bind() from provider { AddIncidenciaUseCase(repository = instance(), executor = instance()) }
+    bind() from provider { AnswerPollUseCase(repository = instance(), executor = instance()) }
+    bind() from provider { GetPollsUseCase(repository = instance(), executor = instance()) }
 }
 
 val dataModule = Kodein.Module {
@@ -55,5 +61,6 @@ val dataModule = Kodein.Module {
     //Repository
     bind<UserRepository>() with singleton { UserRepositoryImpl(network = instance(), persistence = instance()) }
     bind<IncidenciesRepository>() with singleton { IncidenciesRepositoryImpl(network = instance(), persistence = instance()) }
+    bind<PollsRepository>() with singleton { PollsRepositoryImpl(network = instance(), persistence = instance()) }
 
 }

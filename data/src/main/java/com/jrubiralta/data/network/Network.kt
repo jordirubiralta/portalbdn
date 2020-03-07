@@ -8,7 +8,8 @@ interface Network {
 
     fun signin(request: SigninDto): Single<UserDto>
     fun signup(request: SignupDto): Single<UserDto>
-    fun getIncidencies(token: String, request: IncidenciaRequestDto): Single<List<IncidenciesDto>>
+    fun getIncidencies(token: String, request: RequestDto): Single<List<IncidenciesDto>>
     fun addIncidencia(token: String, request: NewIncidenciaRequestDto): Single<Unit>
-
+    fun answerPoll(token: String, request: AnswerPollRequestDto): Single<Unit>
+    fun getPolls(token: String, request: RequestDto): Single<List<GetPollsResponseDto>>
 }

@@ -1,7 +1,9 @@
 package com.jrubiralta.data.mapper
 
+import com.jrubiralta.data.model.GetPollsResponseDto
 import com.jrubiralta.data.model.IncidenciesDto
 import com.jrubiralta.data.model.UserDto
+import com.jrubiralta.domain.model.GetPollsResponseModel
 import com.jrubiralta.domain.model.Incidencia
 import com.jrubiralta.domain.model.User
 import com.jrubiralta.portalbdn.domain.constants.Constants
@@ -24,3 +26,8 @@ fun IncidenciesDto.toModel(): Incidencia =
                 ubicacio = ubicacio ?: Constants.EMPTY_STRING,
                 resolt = resolt ?: false)
 
+fun GetPollsResponseDto.toModel(): GetPollsResponseModel =
+        GetPollsResponseModel(
+                pollId = pollId,
+                question = question,
+                answer = answer)

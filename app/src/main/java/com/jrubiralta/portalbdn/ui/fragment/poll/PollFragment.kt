@@ -9,8 +9,8 @@ import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
+import com.jrubiralta.domain.model.GetPollsResponseModel
 import com.jrubiralta.portalbdn.R
-import com.jrubiralta.portalbdn.model.PollItem
 import com.jrubiralta.portalbdn.presenter.poll.PollPresenter
 import com.jrubiralta.portalbdn.presenter.poll.PollPresenterImpl
 import com.jrubiralta.portalbdn.ui.adapter.PollAdapter
@@ -40,7 +40,9 @@ class PollFragment :
         bind<PollPresenter>() with provider {
             PollPresenterImpl(
                     view = this@PollFragment,
-                    persistence = instance()
+                    persistence = instance(),
+                    answerPollUseCase = instance(),
+                    getPollsUseCase = instance()
             )
         }
     }
@@ -57,7 +59,6 @@ class PollFragment :
     }
 
     private fun initViews() {
-        initAdapter()
     }
 
     private fun initListeners() {
@@ -68,22 +69,18 @@ class PollFragment :
 
     }
 
-    private fun initAdapter() {
+    override fun showPolls(pollList: List<GetPollsResponseModel>) {
         val pollAdapter = PollAdapter(getCtx(), this)
         rv_poll.adapter = pollAdapter
         rv_poll.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-        val list = mutableListOf<PollItem>()
-        list.add(PollItem(title = "Creus que hem de afegir cendrés a les escombraries?", correctAnswers = 10, negativeAnswers = 3))
-        list.add(PollItem(title = "S'hauria de reformar el pont del petroli?", correctAnswers = 100, negativeAnswers = 5))
-        pollAdapter.replace(list)
+        pollAdapter.replace(pollList.toMutableList())
     }
 
-    override fun updateYes() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun updateYes(pollId: String?) {
+        presenter.updateAnswer(true, pollId)
     }
 
-    override fun updateNo() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun updateNo(pollId: String?) {
+        presenter.updateAnswer(false, pollId)
     }
-
 }
