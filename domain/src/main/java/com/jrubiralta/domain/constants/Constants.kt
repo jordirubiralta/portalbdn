@@ -28,6 +28,9 @@ class Constants {
             BuildType.DEBUG -> "portal_debug"
             BuildType.RELEASE -> "portalbdn"
         }
+
+        const val CONSUMER_KEY = "SK905jFt7SG5UOjrmJKQdEBl4"
+        const val CONSUMER_SECRET = "u1nqLETz8FuuJItIksgYSqPohYb3FDKgSveHKhk8dk0VfKILLs"
     }
 }
 

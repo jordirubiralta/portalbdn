@@ -47,6 +47,10 @@ dependencies {
     implementation appDependencies.rxJava
     implementation appDependencies.rxAndroid
 
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
+
+
     testImplementation appTestDependencies.jUnit
     testImplementation appTestDependencies.mockito
 
