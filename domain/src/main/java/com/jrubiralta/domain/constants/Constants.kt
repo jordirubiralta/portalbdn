@@ -42,5 +42,5 @@ enum class BuildType {
 
 
 enum class Screen {
-    HOME, NEWS, CALENDAR, POLLS, INCIDENTS
+    NEWS, CALENDAR, POLLS, INCIDENTS
 }

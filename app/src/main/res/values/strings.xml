@@ -10,6 +10,7 @@
     <string name="calendari">Calendari</string>
     <string name="enquestes">Enquestes</string>
     <string name="incidencies">Incidències</string>
+    <string name="configuracio">Configuració</string>
     <string name="logout">Tancar sessió</string>
 
     <string name="nova_incidencia">Nova Incidències</string>

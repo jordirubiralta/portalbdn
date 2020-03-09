@@ -55,6 +55,7 @@ class HomeActivity
     private fun initView() {
 //        setContentView(layoutResourceId)
         replaceFragment(R.id.navigation_view_main, DrawerFragment.newInstance())
+        openNewsFragment()
     }
 
     private fun initListeners() {
@@ -74,14 +75,6 @@ class HomeActivity
             drawer.closeDrawer(Gravity.LEFT)
         } else
             drawer.openDrawer(Gravity.LEFT)
-    }
-
-    override fun openHomeFragment() {
-        val fragment = NewsFragment.newInstance()
-        replaceFragment(R.id.fragment_container, fragment)
-        toolbar_title.setText(R.string.inici)
-        presenter.moveDrawer()
-        bt_add.visibility = View.GONE
     }
 
     override fun openNewsFragment() {
@@ -117,12 +110,19 @@ class HomeActivity
         bt_add.visible()
     }
 
+    override fun openSettings() {
+        val fragment = IncidentListFragment.newInstance()
+        replaceFragment(R.id.fragment_container, fragment)
+        toolbar_title.setText(R.string.incidencies)
+        presenter.moveDrawer()
+        bt_add.visible()
+    }
 }
 
 interface HomeListener {
-    fun openHomeFragment()
     fun openNewsFragment()
     fun openCalendarFragment()
     fun openPollFragment()
     fun openIncidentsFragment()
+    fun openSettings()
 }

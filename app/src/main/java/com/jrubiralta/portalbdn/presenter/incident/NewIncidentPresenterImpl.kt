@@ -21,7 +21,7 @@ class NewIncidentPresenterImpl(
     }
 
     private fun executeAddIncident(title: String, description: String, location: String) {
-        addIncidenciaUseCase.execute(title, description, description,
+        addIncidenciaUseCase.execute(title, description, location,
                 onSuccess = {
                     view.navigateToList()
                 },

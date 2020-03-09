@@ -14,7 +14,7 @@ class IncidentListPresenterImpl(
     : BasePresenterImpl<IncidentListView>(view, persistence),
         IncidentListPresenter {
 
-    override fun init() {
+    override fun resume() {
         super.init()
         getIncidents()
     }

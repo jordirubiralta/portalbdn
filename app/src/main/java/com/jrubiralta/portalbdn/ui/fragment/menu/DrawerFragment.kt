@@ -84,7 +84,6 @@ class DrawerFragment :
 
     override fun onServiceSelection(menuItem: MenuItem) {
         when (menuItem.type) {
-            MenuType.HOME -> (activity!! as HomeListener).openHomeFragment()
             MenuType.NEWS -> (activity!! as HomeListener).openNewsFragment()
             MenuType.CALENDAR -> (activity!! as HomeListener).openCalendarFragment()
             MenuType.POLLS -> (activity!! as HomeListener).openPollFragment()
@@ -94,7 +93,6 @@ class DrawerFragment :
 
     override fun onViewStart() {
         val list = mutableListOf<MenuItem>()
-        list.add(MenuItem(screen = Screen.HOME, iconId = R.drawable.ic_home, name = R.string.inici, type = MenuType.HOME))
         list.add(MenuItem(screen = Screen.NEWS, iconId = R.drawable.ic_newspaper, name = R.string.noticies, type = MenuType.NEWS))
         list.add(MenuItem(screen = Screen.CALENDAR, iconId = R.drawable.ic_calendar_2, name = R.string.calendari, type = MenuType.CALENDAR))
         list.add(MenuItem(screen = Screen.POLLS, iconId = R.drawable.ic_analytics, name = R.string.enquestes, type = MenuType.POLLS))
