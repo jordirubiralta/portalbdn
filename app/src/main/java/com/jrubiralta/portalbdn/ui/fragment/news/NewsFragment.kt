@@ -79,7 +79,7 @@ class NewsFragment :
                 .build()
         Twitter.initialize(config)
         val userTimeline = UserTimeline.Builder()
-                .maxItemsPerRequest(10)
+                .maxItemsPerRequest(5)
                 .screenName("Totbadalona")
                 .includeRetweets(false)
                 .includeReplies(false)
