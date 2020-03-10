@@ -166,7 +166,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_12"
-        android:layout_marginEnd="@dimen/dimen_4"
         android:background="@drawable/zz_edittext_background"
         android:paddingStart="@dimen/dimen_2"
         android:paddingTop="@dimen/dimen_8"
@@ -190,46 +189,112 @@
             android:maxLines="1"
             android:lines="1"
             android:singleLine="true"
-            android:nextFocusDown="@id/et_mail_repeat"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/text_small" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_mail_repeat"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newspaper_selector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_12"
-        android:layout_marginEnd="@dimen/dimen_4"
-        android:background="@drawable/zz_edittext_background"
-        android:paddingStart="@dimen/dimen_2"
-        android:paddingTop="@dimen/dimen_8"
-        android:paddingEnd="@dimen/dimen_2"
-        android:paddingBottom="@dimen/dimen_8"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll_mail">
 
-        <EditText
-            android:id="@+id/et_mail_repeat"
+        <TextView
+            android:id="@+id/tv_newspaper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@color/white"
-            android:fontFamily="@font/highwaygothicnarrow"
-            android:hint="@string/mail_2"
-            android:inputType="textEmailAddress"
-            android:paddingStart="@dimen/dimen_8"
-            android:paddingEnd="@dimen/dimen_8"
-            android:maxLines="1"
-            android:lines="1"
-            android:singleLine="true"
-            android:nextFocusDown="@id/btn_register"
             android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/text_small" />
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            android:fontFamily="@font/highwaygothicnarrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/newspaper_selector"/>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_diaribadalona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/dimen_12"
+            app:layout_constraintTop_toBottomOf="@id/tv_newspaper">
+
+            <RadioButton
+                android:id="@+id/rb_diaribadalona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/diaribadalona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkx_grey"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="@font/highwaygothicnarrow"
+                android:text="Diari de Badalona"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_totbadalona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/dimen_12"
+            app:layout_constraintTop_toBottomOf="@id/ll_diaribadalona">
+
+            <RadioButton
+                android:id="@+id/rb_totbadalona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/totbadalona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkx_grey"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="@font/highwaygothicnarrow"
+                android:text="TotBadalona"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_independent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/dimen_12"
+            app:layout_constraintTop_toBottomOf="@id/ll_totbadalona">
+
+            <RadioButton
+                android:id="@+id/rb_independent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/independent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkx_grey"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="@font/highwaygothicnarrow"
+                android:text="L'Independent de Badalona"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tv_error"
@@ -244,7 +309,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll_mail_repeat" />
+        app:layout_constraintTop_toBottomOf="@+id/newspaper_selector" />
 
     <Button
         android:id="@+id/btn_register"
@@ -259,7 +324,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll_mail_repeat" />
+        app:layout_constraintTop_toBottomOf="@id/newspaper_selector" />
 
     <LinearLayout
         android:id="@+id/linearLayout"

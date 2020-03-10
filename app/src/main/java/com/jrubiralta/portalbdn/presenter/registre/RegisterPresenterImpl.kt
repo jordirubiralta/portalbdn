@@ -14,12 +14,12 @@ class RegisterPresenterImpl(
         RegisterPresenter {
 
 
-    override fun signup(email: String, password: String, name: String, surname: String, age: Int) {
-        executeSignup(email, password, name, surname, age)
+    override fun signup(email: String, password: String, name: String, surname: String, age: Int, newspaper: String) {
+        executeSignup(email, password, name, surname, age, newspaper)
     }
 
-    private fun executeSignup(email: String, password: String, name: String, surname: String, age: Int) {
-        signUpUseCase.execute(email, password, name, surname, age,
+    private fun executeSignup(email: String, password: String, name: String, surname: String, age: Int, newspaper: String) {
+        signUpUseCase.execute(email, password, name, surname, age, newspaper,
                 onSuccess = {
                     it.token?.let {
                         persistence.setAccessToken(it)

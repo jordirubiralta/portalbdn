@@ -21,9 +21,9 @@ class UserRepositoryImpl(
         return network.signin(request).map { it.toModel() }
     }
 
-    override fun signup(email: String, password: String, name: String, surname: String, age: Int): Single<User> {
+    override fun signup(email: String, password: String, name: String, surname: String, age: Int, newspaper: String) : Single<User> {
         val request = SignupDto(email = email, password = password, name = name, surname = surname,
-                age = age)
+                age = age, newspaper = newspaper)
         return network.signup(request).map { it.toModel() }
     }
 }

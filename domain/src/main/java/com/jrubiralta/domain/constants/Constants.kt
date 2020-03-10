@@ -24,6 +24,10 @@ class Constants {
         const val SMS_VALIDATE_CODE_LENGTH: Int = 6
         const val KEY_REALM_KEY: String = "KEY_REALM_KEY"
 
+        const val NEWS_TOTBADALONA = "Totbadalona"
+        const val NEWS_INDEPENDENT = "IndependentBDN"
+        const val NEWS_DIARI_DE_BADALONA = "DiarideBadalona"
+
         fun preferencesName(buildType: BuildType): String = when (buildType) {
             BuildType.DEBUG -> "portal_debug"
             BuildType.RELEASE -> "portalbdn"

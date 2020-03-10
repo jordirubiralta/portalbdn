@@ -7,4 +7,5 @@ import com.jrubiralta.portalbdn.ui.view.registre.RegisterView
 interface NewsPresenter
     : BasePresenter<NewsView> {
 
+    fun getNewspaper(): String
 }

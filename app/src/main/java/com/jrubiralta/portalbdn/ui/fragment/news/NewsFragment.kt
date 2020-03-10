@@ -72,6 +72,7 @@ class NewsFragment :
     }
 
     private fun initData() {
+
         tweets.layoutManager = LinearLayoutManager(requireContext())
 
         var config: TwitterConfig = TwitterConfig.Builder(requireContext())
@@ -80,7 +81,7 @@ class NewsFragment :
         Twitter.initialize(config)
         val userTimeline = UserTimeline.Builder()
                 .maxItemsPerRequest(5)
-                .screenName("Totbadalona")
+                .screenName(presenter.getNewspaper())
                 .includeRetweets(false)
                 .includeReplies(false)
                 .build()

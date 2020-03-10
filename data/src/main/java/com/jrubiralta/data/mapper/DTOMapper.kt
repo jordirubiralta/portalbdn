@@ -12,7 +12,8 @@ fun UserDto.toModel() = User(
         email = email,
         age = age,
         name = name,
-        surname = surname)
+        surname = surname,
+        newspaper = newspaper)
 
 fun IncidenciesDto.toModel(): Incidencia =
         Incidencia(

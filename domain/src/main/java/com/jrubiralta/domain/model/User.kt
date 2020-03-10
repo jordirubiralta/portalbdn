@@ -6,4 +6,5 @@ data class User(
         var email: String? = null,
         var age: Int? = null,
         var name: String? = null,
-        var surname: String? = null)
+        var surname: String? = null,
+        var newspaper: String? = null)
