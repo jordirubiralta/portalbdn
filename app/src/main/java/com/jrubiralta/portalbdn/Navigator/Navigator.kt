@@ -30,6 +30,11 @@ object Navigator {
         openNewIncidentActivity(params.activity, intent, params.finishActivity)
     }
 
+    fun openSettingsPage(params: NavParams) {
+        val intent = Intent(params.activity, NewIncidentActivity::class.java)
+        openSettingsActivity(params.activity, intent, params.finishActivity)
+    }
+
     private fun openLoginActivity(activity: Activity, intent: Intent, finishActivity: Boolean = true) {
         activity.startActivity(intent)
         if (finishActivity) activity.finishAffinity()
@@ -46,6 +51,11 @@ object Navigator {
     }
 
     private fun openNewIncidentActivity(activity: Activity, intent: Intent, finishActivity: Boolean = true) {
+        activity.startActivity(intent)
+        if (finishActivity) activity.finishAffinity()
+    }
+
+    private fun openSettingsActivity(activity: Activity, intent: Intent, finishActivity: Boolean = true) {
         activity.startActivity(intent)
         if (finishActivity) activity.finishAffinity()
     }

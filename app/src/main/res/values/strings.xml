@@ -46,4 +46,13 @@
     <string name="incidencia_location_hint">Cantonada carrer del Mar amb la Rambla</string>
     <string name="btn_new_incidencia">Afegir</string>
 
+    <!--    Noticies-->
+    <string name="informacio">Informació</string>
+
+    <!--    Dialog-->
+    <string name="dialog_message_logout">Estàs segur que vols tancar la sessió?</string>
+    <string name="dialog_message_news">Per canviar el diari font de notícies accedeix a Configuració > Canviar diari font</string>
+    <string name="ok">D\'acord</string>
+
+
 </resources>

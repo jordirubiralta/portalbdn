@@ -26,7 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="@font/highwaygothicnarrow"
-            android:text="@string/logout" />
+            android:text="@string/informacio" />
 
         <TextView
             android:id="@+id/dialog_description"
@@ -42,43 +42,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dialog_title"
             android:fontFamily="@font/highwaygothicnarrow"
-            android:text="Estàs segur que vols tancar la sessió?" />
+            android:text="@string/dialog_message_news" />
 
-
-        <TextView
-            android:id="@+id/btn_cancel"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:background="@drawable/zz_dialog_button_light"
-            android:gravity="center"
-            android:textColor="@color/darkx_grey"
-            android:textSize="@dimen/text_small"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toEndOf="@+id/btn_ok"
-            app:layout_constraintTop_toBottomOf="@+id/dialog_description"
-            android:fontFamily="@font/highwaygothicnarrow"
-            android:text="NO" />
 
         <TextView
             android:id="@+id/btn_ok"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/zz_dialog_button_dark"
+            android:background="@drawable/zz_dialog_button_news"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="@dimen/text_small"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_cancel"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dialog_description"
             android:fontFamily="@font/highwaygothicnarrow"
-            android:text="SI" />
+            android:text="@string/ok" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

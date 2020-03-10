@@ -13,12 +13,14 @@ import com.jrubiralta.portalbdn.R
 import com.jrubiralta.portalbdn.presenter.home.HomePresenter
 import com.jrubiralta.portalbdn.presenter.home.HomePresenterImpl
 import com.jrubiralta.portalbdn.ui.activity.BaseActivity
+import com.jrubiralta.portalbdn.ui.dialog.NewsInfoDialog
 import com.jrubiralta.portalbdn.ui.fragment.calendar.CalendarFragment
 import com.jrubiralta.portalbdn.ui.fragment.incident.IncidentListFragment
 import com.jrubiralta.portalbdn.ui.fragment.menu.DrawerFragment
 import com.jrubiralta.portalbdn.ui.fragment.news.NewsFragment
 import com.jrubiralta.portalbdn.ui.fragment.poll.PollFragment
 import com.jrubiralta.portalbdn.ui.view.home.HomeView
+import com.jrubiralta.portalbdn.utils.gone
 import com.jrubiralta.portalbdn.utils.visible
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.view_toolbar.*
@@ -61,6 +63,7 @@ class HomeActivity
     private fun initListeners() {
         bt_menu.setOnClickListener { presenter.moveDrawer() }
         bt_add.setOnClickListener { Navigator.openNewIncidentPage(NavParams(this, false)) }
+        bt_info.setOnClickListener { NewsInfoDialog.newInstance().show(supportFragmentManager, "alert") }
     }
 
     private fun initData() {
@@ -82,7 +85,8 @@ class HomeActivity
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.noticies)
         presenter.moveDrawer()
-        bt_add.visibility = View.GONE
+        bt_add.gone()
+        bt_info.visible()
     }
 
     override fun openCalendarFragment() {
@@ -90,8 +94,8 @@ class HomeActivity
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.calendari)
         presenter.moveDrawer()
-        bt_add.visibility = View.GONE
-
+        bt_add.gone()
+        bt_info.gone()
     }
 
     override fun openPollFragment() {
@@ -99,7 +103,8 @@ class HomeActivity
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.enquestes)
         presenter.moveDrawer()
-        bt_add.visibility = View.GONE
+        bt_add.gone()
+        bt_info.gone()
     }
 
     override fun openIncidentsFragment() {
@@ -107,15 +112,12 @@ class HomeActivity
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.incidencies)
         presenter.moveDrawer()
-        bt_add.visible()
+        bt_add.gone()
+        bt_info.gone()
     }
 
-    override fun openSettings() {
-        val fragment = IncidentListFragment.newInstance()
-        replaceFragment(R.id.fragment_container, fragment)
-        toolbar_title.setText(R.string.incidencies)
-        presenter.moveDrawer()
-        bt_add.visible()
+    override fun openSettingsActivity() {
+        Navigator.openSettingsPage(NavParams(this, false))
     }
 }
 
@@ -124,5 +126,5 @@ interface HomeListener {
     fun openCalendarFragment()
     fun openPollFragment()
     fun openIncidentsFragment()
-    fun openSettings()
+    fun openSettingsActivity()
 }
