@@ -5,6 +5,7 @@
     android:id="@+id/incident_background"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_24"
     android:background="@drawable/zz_incident_background"
     android:orientation="vertical"
     android:paddingHorizontal="@dimen/dimen_12"
@@ -29,7 +30,6 @@
         android:fontFamily="@font/highwaygothicnarrow"
         android:textColor="@color/darkx_grey"
         android:textSize="@dimen/text_small"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         tools:text="La rampa de Sant Crist no funciona des de fa un any i mig." />

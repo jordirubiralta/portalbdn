@@ -20,7 +20,7 @@ abstract class BaseAdapter<T>(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<T> {
-        val view = LayoutInflater.from(parent?.context).inflate(itemLayoutId, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(itemLayoutId, parent, false)
 
         val viewHolder = viewHolder(view)
         viewHolder.onItemClickListener = { onItemClickListener(items[it]) }
@@ -29,7 +29,7 @@ abstract class BaseAdapter<T>(
     }
 
     override fun onBindViewHolder(holder: BaseViewHolder<T>, position: Int) {
-        holder?.bind(items[position])
+        holder.bind(items[position])
     }
 
     fun add(item: T) {

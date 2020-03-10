@@ -6,6 +6,4 @@ import com.jrubiralta.portalbdn.ui.view.incident.IncidentListView
 import com.jrubiralta.portalbdn.ui.view.registre.RegisterView
 
 interface IncidentListPresenter
-    : BasePresenter<IncidentListView> {
-
-}
+    : BasePresenter<IncidentListView>

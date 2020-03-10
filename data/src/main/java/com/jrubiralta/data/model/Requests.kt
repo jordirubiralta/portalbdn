@@ -16,6 +16,19 @@ data class SignupDto(
         @SerializedName("newspaper") val newspaper: String
 )
 
-data class IncidenciaRequestDto(
+data class RequestDto(
         @SerializedName("user_id") val userId: String
+)
+
+data class NewIncidenciaRequestDto(
+        @SerializedName("user_id") val userId: String,
+        @SerializedName("title") val title: String,
+        @SerializedName("description") val description: String,
+        @SerializedName("location") val location: String
+)
+
+data class AnswerPollRequestDto(
+        @SerializedName("user_id") val userId: String,
+        @SerializedName("poll_id") val pollId: String,
+        @SerializedName("answer") val answer: Boolean
 )

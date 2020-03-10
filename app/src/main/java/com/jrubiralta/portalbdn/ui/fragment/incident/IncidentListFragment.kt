@@ -11,18 +11,12 @@ import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
 import com.jrubiralta.domain.model.Incidencia
 import com.jrubiralta.portalbdn.R
-import com.jrubiralta.portalbdn.model.PollItem
-import com.jrubiralta.portalbdn.presenter.calendar.CalendarPresenter
-import com.jrubiralta.portalbdn.presenter.calendar.CalendarPresenterImpl
 import com.jrubiralta.portalbdn.presenter.incident.IncidentListPresenter
 import com.jrubiralta.portalbdn.presenter.incident.IncidentListPresenterImpl
 import com.jrubiralta.portalbdn.ui.adapter.IncidentAdapter
-import com.jrubiralta.portalbdn.ui.adapter.PollAdapter
 import com.jrubiralta.portalbdn.ui.fragment.BaseFragment
-import com.jrubiralta.portalbdn.ui.view.calendar.CalendarView
 import com.jrubiralta.portalbdn.ui.view.incident.IncidentListView
 import kotlinx.android.synthetic.main.fragment_incidents.*
-import kotlinx.android.synthetic.main.fragment_poll.*
 
 
 class IncidentListFragment :

@@ -21,5 +21,20 @@ interface ApiService {
     @Headers("Content-Type: application/json")
     @POST("getIncidencies")
     fun getIncidencies(@Header("Authorization") auth: String,
-                       @Body user_id: IncidenciaRequestDto): Single<List<IncidenciesDto>>
+                       @Body user_id: RequestDto): Single<List<IncidenciesDto>>
+
+    @Headers("Content-Type: application/json")
+    @POST("addIncidencia")
+    fun addIncidencia(@Header("Authorization") auth: String,
+                       @Body user_id: NewIncidenciaRequestDto): Single<Unit>
+
+    @Headers("Content-Type: application/json")
+    @POST("answerPoll")
+    fun answerPoll(@Header("Authorization") auth: String,
+                       @Body user_id: AnswerPollRequestDto): Single<Unit>
+
+    @Headers("Content-Type: application/json")
+    @POST("getPolls")
+    fun getPolls(@Header("Authorization") auth: String,
+                      @Body user_id: RequestDto): Single<List<GetPollsResponseDto>>
 }

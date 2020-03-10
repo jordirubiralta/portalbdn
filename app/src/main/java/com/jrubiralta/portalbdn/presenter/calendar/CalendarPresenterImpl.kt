@@ -10,5 +10,4 @@ class CalendarPresenterImpl(
         view: CalendarView,
         persistence: Persistence)
     : BasePresenterImpl<CalendarView>(view, persistence),
-        CalendarPresenter {
-}
+        CalendarPresenter

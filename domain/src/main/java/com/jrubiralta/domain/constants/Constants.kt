@@ -1,4 +1,4 @@
-package com.jrubiralta.portalbdn.domain.constants;
+package com.jrubiralta.portalbdn.domain.constants
 
 class Constants {
 
@@ -49,5 +49,5 @@ enum class BuildType {
 
 
 enum class Screen {
-    HOME, NEWS, CALENDAR, POLLS, INCIDENTS
+    NEWS, CALENDAR, POLLS, INCIDENTS
 }

@@ -9,7 +9,8 @@
         android:id="@+id/rv_incidents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_24"
+        android:layout_marginHorizontal="@dimen/dimen_24"
+        android:layout_marginBottom="@dimen/dimen_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

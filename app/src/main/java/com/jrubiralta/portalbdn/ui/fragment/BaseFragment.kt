@@ -87,6 +87,6 @@ abstract class BaseFragment<P, V>
     }
 
     open fun isBackAllowed() : Boolean {
-        return true;
+        return true
     }
 }

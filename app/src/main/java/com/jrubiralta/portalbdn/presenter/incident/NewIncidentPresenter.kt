@@ -7,4 +7,5 @@ import com.jrubiralta.portalbdn.ui.view.registre.RegisterView
 interface NewIncidentPresenter
     : BasePresenter<NewIncidentView> {
 
+    fun addIncident(title: String, description: String, location: String)
 }

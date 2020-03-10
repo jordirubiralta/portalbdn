@@ -4,5 +4,4 @@ import com.jrubiralta.portalbdn.presenter.BasePresenter
 import com.jrubiralta.portalbdn.ui.view.splash.SplashView
 
 interface SplashPresenter
-    : BasePresenter<SplashView> {
-}
+    : BasePresenter<SplashView>
