@@ -12,6 +12,8 @@ import com.jrubiralta.portalbdn.R
 import com.jrubiralta.portalbdn.domain.constants.Constants
 import com.jrubiralta.portalbdn.presenter.news.NewsPresenter
 import com.jrubiralta.portalbdn.presenter.news.NewsPresenterImpl
+import com.jrubiralta.portalbdn.presenter.news.SettingsPresenter
+import com.jrubiralta.portalbdn.presenter.news.SettingsPresenterImpl
 import com.jrubiralta.portalbdn.ui.fragment.BaseFragment
 import com.jrubiralta.portalbdn.ui.view.news.NewsView
 import com.jrubiralta.portalbdn.utils.gone

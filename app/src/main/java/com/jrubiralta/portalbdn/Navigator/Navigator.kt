@@ -7,6 +7,7 @@ import com.jrubiralta.portalbdn.ui.activity.home.HomeActivity
 import com.jrubiralta.portalbdn.ui.activity.login.LoginActivity
 import com.jrubiralta.portalbdn.ui.activity.newIncident.NewIncidentActivity
 import com.jrubiralta.portalbdn.ui.activity.registre.RegisterActivity
+import com.jrubiralta.portalbdn.ui.activity.settings.SettingsActivity
 
 object Navigator {
 
@@ -31,7 +32,7 @@ object Navigator {
     }
 
     fun openSettingsPage(params: NavParams) {
-        val intent = Intent(params.activity, NewIncidentActivity::class.java)
+        val intent = Intent(params.activity, SettingsActivity::class.java)
         openSettingsActivity(params.activity, intent, params.finishActivity)
     }
 

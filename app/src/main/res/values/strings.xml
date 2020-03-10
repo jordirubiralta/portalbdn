@@ -11,7 +11,6 @@
     <string name="enquestes">Enquestes</string>
     <string name="incidencies">Incidències</string>
     <string name="configuracio">Configuració</string>
-    <string name="logout">Tancar sessió</string>
 
     <string name="nova_incidencia">Nova Incidències</string>
 
@@ -54,5 +53,12 @@
     <string name="dialog_message_news">Per canviar el diari font de notícies accedeix a Configuració > Canviar diari font</string>
     <string name="ok">D\'acord</string>
 
+    <!--    Configuració-->
+    <string name="app_info_title">Per què serveix l'aplicació?</string>
+    <string name="app_info">Aquesta aplicació té la finalitat d\'acostar els ciutadans amb l\'ajuntament i facilitar-ne la comunicació. Permet veure notícies de diferents mitjans de comunicació de la ciutat, veure esdeveniments propers, contestar preguntes formulades pel mateix ajuntament i, finalment, reportar incidències.</string>
+    <string name="logout">Tancar sessió</string>
+    <string name="totbadalona">Tot Badalona</string>
+    <string name="diari_de_badalona">Diari de Badalona</string>
+    <string name="independent_de_badalona">L\'Independent de Badalona</string>
 
 </resources>

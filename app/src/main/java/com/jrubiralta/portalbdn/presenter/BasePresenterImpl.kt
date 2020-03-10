@@ -25,8 +25,9 @@ abstract class BasePresenterImpl<V>(
 
     override fun getContext() = view.getCtx()
 
-    fun logout() {
+    override fun logout() {
         persistence.removeAccessToken()
         persistence.removeUser()
+        persistence.removeNewspaper()
     }
 }

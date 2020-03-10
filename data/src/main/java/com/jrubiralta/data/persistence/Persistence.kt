@@ -13,4 +13,9 @@ interface Persistence {
     fun setUser(user: User)
     fun hasUser(): Boolean
     fun removeUser()
+
+    fun getNewspaper(): String
+    fun setNewspaper(user: String)
+    fun hasNewspaper(): Boolean
+    fun removeNewspaper()
 }

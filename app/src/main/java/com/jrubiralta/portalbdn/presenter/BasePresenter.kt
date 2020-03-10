@@ -10,4 +10,5 @@ interface BasePresenter<V> where V : View {
     fun stop()
     fun destroy()
     fun getContext(): Context
+    fun logout()
 }

@@ -209,7 +209,6 @@
             android:layout_height="wrap_content"
             android:textColor="@color/darkx_grey"
             android:textSize="@dimen/text_small"
-            android:textStyle="bold"
             android:fontFamily="@font/highwaygothicnarrow"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -236,7 +235,7 @@
                 android:textColor="@color/darkx_grey"
                 android:textSize="@dimen/text_small"
                 android:fontFamily="@font/highwaygothicnarrow"
-                android:text="Diari de Badalona"/>
+                android:text="@string/diari_de_badalona"/>
 
         </LinearLayout>
 
@@ -261,7 +260,7 @@
                 android:textColor="@color/darkx_grey"
                 android:textSize="@dimen/text_small"
                 android:fontFamily="@font/highwaygothicnarrow"
-                android:text="TotBadalona"/>
+                android:text="@string/totbadalona"/>
 
         </LinearLayout>
 
@@ -286,13 +285,9 @@
                 android:textColor="@color/darkx_grey"
                 android:textSize="@dimen/text_small"
                 android:fontFamily="@font/highwaygothicnarrow"
-                android:text="L'Independent de Badalona"/>
+                android:text="@string/independent_de_badalona"/>
 
         </LinearLayout>
-
-
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

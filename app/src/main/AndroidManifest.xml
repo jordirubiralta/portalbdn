@@ -39,5 +39,9 @@
             android:name=".ui.activity.newIncident.NewIncidentActivity"
             android:screenOrientation="behind"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".ui.activity.settings.SettingsActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/AppTheme"/>
     </application>
 </manifest>

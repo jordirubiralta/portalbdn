@@ -25,6 +25,7 @@
     <dimen name="login_card_padding_vertical">36dp</dimen>
     <dimen name="login_card_padding_horizontal">48dp</dimen>
     <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
     <dimen name="dimen_2">2dp</dimen>
     <dimen name="icon_size">8dp</dimen>
     <dimen name="dimen_12">12dp</dimen>

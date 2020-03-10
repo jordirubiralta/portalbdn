@@ -21,8 +21,11 @@ class LoginPresenterImpl(
     private fun executeSignin(email: String, password: String) {
         signInUseCase.execute(email, password,
                 onSuccess = {
-                    it.token?.let {
-                        persistence.setAccessToken(it)
+                    it.token?.let { token ->
+                        persistence.setAccessToken(token)
+                    }
+                    it.newspaper?.let { newspaper ->
+                        persistence.setNewspaper(newspaper)
                     }
                     persistence.setUser(it)
                     view.loginSuccess(it)
@@ -30,7 +33,7 @@ class LoginPresenterImpl(
                 },
                 onError = {
                     view.printErrorMessage(it.message)
-                    view.loginError(true, true)
+                    view.loginError(username = true, password = true)
                 }
         )
     }
