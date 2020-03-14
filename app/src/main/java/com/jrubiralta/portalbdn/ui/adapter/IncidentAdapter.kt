@@ -29,7 +29,8 @@ class IncidentAdapter(val context: Context)
         }
 
         private fun getDate(date: Date?): String {
-            val outputFormat = "dd/MM/yyyy HH:mm:ss"
+            val outputPattern = "dd/MM/yyyy HH:mm:ss"
+            val outputFormat = SimpleDateFormat(outputPattern)
             return outputFormat.format(date)
         }
     }

@@ -58,10 +58,14 @@ class NewsFragment :
         init()
     }
 
+    override fun onResume() {
+        super.onResume()
+        initData()
+    }
+
     private fun init() {
         initViews()
         initListeners()
-        initData()
     }
 
     private fun initViews() {

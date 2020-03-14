@@ -90,7 +90,7 @@ class HomeActivity
         val fragment = NewsFragment.newInstance()
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.noticies)
-//        presenter.moveDrawer()
+        presenter.moveDrawer()
         bt_add.gone()
         bt_info.visible()
     }
