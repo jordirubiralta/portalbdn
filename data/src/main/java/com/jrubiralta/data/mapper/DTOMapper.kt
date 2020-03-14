@@ -1,8 +1,10 @@
 package com.jrubiralta.data.mapper
 
+import com.jrubiralta.data.model.GetEventsResponseDto
 import com.jrubiralta.data.model.GetPollsResponseDto
 import com.jrubiralta.data.model.IncidenciesDto
 import com.jrubiralta.data.model.UserDto
+import com.jrubiralta.domain.model.GetEventsResponseModel
 import com.jrubiralta.domain.model.GetPollsResponseModel
 import com.jrubiralta.domain.model.Incidencia
 import com.jrubiralta.domain.model.User
@@ -23,7 +25,7 @@ fun IncidenciesDto.toModel(): Incidencia =
                 userId = userId,
                 titol = titol ?: Constants.EMPTY_STRING,
                 descripcio = descripcio ?: Constants.EMPTY_STRING,
-                data = data ?: Constants.EMPTY_STRING,
+                data = data,
                 ubicacio = ubicacio ?: Constants.EMPTY_STRING,
                 resolt = resolt ?: false)
 
@@ -32,3 +34,12 @@ fun GetPollsResponseDto.toModel(): GetPollsResponseModel =
                 pollId = pollId,
                 question = question,
                 answer = answer)
+
+fun GetEventsResponseDto.toModel(): GetEventsResponseModel =
+        GetEventsResponseModel(
+                title = title,
+                description = description,
+                date = date,
+                img = img,
+                location = location,
+                organizator = organizator)

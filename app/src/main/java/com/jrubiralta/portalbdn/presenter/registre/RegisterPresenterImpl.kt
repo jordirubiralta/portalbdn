@@ -21,8 +21,11 @@ class RegisterPresenterImpl(
     private fun executeSignup(email: String, password: String, name: String, surname: String, age: Int, newspaper: String) {
         signUpUseCase.execute(email, password, name, surname, age, newspaper,
                 onSuccess = {
-                    it.token?.let {
-                        persistence.setAccessToken(it)
+                    it.token?.let { token ->
+                        persistence.setAccessToken(token)
+                    }
+                    it.newspaper?.let { newspaper ->
+                        persistence.setNewspaper(newspaper)
                     }
                     persistence.setUser(it)
                     view.registerSuccess(it)

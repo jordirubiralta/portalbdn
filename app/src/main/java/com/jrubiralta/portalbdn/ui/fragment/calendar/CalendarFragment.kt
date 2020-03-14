@@ -2,15 +2,22 @@ package com.jrubiralta.portalbdn.ui.fragment.calendar
 
 import android.os.Bundle
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
+import com.jrubiralta.domain.model.GetEventsResponseModel
 import com.jrubiralta.portalbdn.R
 import com.jrubiralta.portalbdn.presenter.calendar.CalendarPresenter
 import com.jrubiralta.portalbdn.presenter.calendar.CalendarPresenterImpl
+import com.jrubiralta.portalbdn.ui.adapter.CalendarAdapter
+import com.jrubiralta.portalbdn.ui.adapter.PollAdapter
 import com.jrubiralta.portalbdn.ui.fragment.BaseFragment
 import com.jrubiralta.portalbdn.ui.view.calendar.CalendarView
+import kotlinx.android.synthetic.main.fragment_calendar.*
+import kotlinx.android.synthetic.main.fragment_poll.*
 
 
 class CalendarFragment :
@@ -34,7 +41,8 @@ class CalendarFragment :
         bind<CalendarPresenter>() with provider {
             CalendarPresenterImpl(
                     view = this@CalendarFragment,
-                    persistence = instance()
+                    persistence = instance(),
+                    getEventsUseCase = instance()
             )
         }
     }
@@ -59,7 +67,11 @@ class CalendarFragment :
     }
 
     private fun initData() {
-
     }
 
+    override fun showEvents(eventsList: List<GetEventsResponseModel>) {
+        val calendarAdapter = CalendarAdapter(getCtx())
+        rv_calendar.adapter = calendarAdapter
+        rv_calendar.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        calendarAdapter.replace(eventsList.toMutableList())    }
 }

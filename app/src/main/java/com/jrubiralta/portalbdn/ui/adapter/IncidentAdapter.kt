@@ -8,6 +8,7 @@ import com.jrubiralta.portalbdn.R
 import com.jrubiralta.portalbdn.domain.constants.Constants
 import kotlinx.android.synthetic.main.item_incident.view.*
 import java.text.SimpleDateFormat
+import java.util.*
 
 class IncidentAdapter(val context: Context)
     : BaseAdapter<Incidencia>() {
@@ -27,17 +28,9 @@ class IncidentAdapter(val context: Context)
             }
         }
 
-        private fun getDate(date: String?): String {
-            var newDate = Constants.EMPTY_STRING
-            date?.let {
-                newDate = date
-                        .replace("T", " ")
-                        .replace("Z", " ")
-            }
-
-            var format = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
-            var output = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-            return output.format(format.parse(newDate))
+        private fun getDate(date: Date?): String {
+            val outputFormat = "dd/MM/yyyy HH:mm:ss"
+            return outputFormat.format(date)
         }
     }
 }

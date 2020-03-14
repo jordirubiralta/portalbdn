@@ -9,8 +9,8 @@ class NewsInfoDialog : BaseDialog() {
 
     companion object {
         @JvmStatic
-        fun newInstance(): LogOutDialog {
-            return LogOutDialog()
+        fun newInstance(): NewsInfoDialog {
+            return NewsInfoDialog()
         }
     }
 

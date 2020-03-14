@@ -9,20 +9,26 @@
         android:id="@+id/include"
         layout="@layout/view_toolbar" />
 
-    <ScrollView
-        android:id="@+id/sv_new_incidencia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_activity"
-        android:layout_marginTop="@dimen/dimen_24"
-        android:layout_marginEnd="@dimen/padding_activity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include">
+<!--    <ScrollView-->
+<!--        android:id="@+id/sv_new_incidencia"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginStart="@dimen/padding_activity"-->
+<!--        android:layout_marginEnd="@dimen/padding_activity"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/include">-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:layout_marginStart="@dimen/padding_activity"
+            android:layout_marginEnd="@dimen/padding_activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include">
 
             <TextView
                 android:id="@+id/new_incidencia_title"
@@ -58,7 +64,7 @@
                     android:background="@color/white"
                     android:fontFamily="@font/highwaygothicnarrow"
                     android:hint="@string/incidencia_title_hint"
-                    android:inputType="textMultiLine"
+                    android:inputType="text"
                     android:paddingStart="@dimen/dimen_8"
                     android:paddingEnd="@dimen/dimen_8"
                     android:textColor="@color/darkx_grey"
@@ -96,7 +102,7 @@
                 <EditText
                     android:id="@+id/et_description"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:background="@color/white"
                     android:fontFamily="@font/highwaygothicnarrow"
@@ -146,7 +152,7 @@
                     android:fontFamily="@font/highwaygothicnarrow"
                     android:gravity="top"
                     android:hint="@string/incidencia_location_hint"
-                    android:inputType="textMultiLine"
+                    android:inputType="text"
                     android:paddingStart="@dimen/dimen_8"
                     android:paddingEnd="@dimen/dimen_8"
                     android:textColor="@color/darkx_grey"
@@ -154,42 +160,40 @@
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_activity"
+                android:fontFamily="@font/highwaygothicnarrow"
+                android:padding="@dimen/dimen_12"
+                android:textColor="@color/red"
+                android:textSize="@dimen/login_secondary"
+                android:textStyle="italic"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/btn_login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_location"
+                tools:text="Falten camps per omplir" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                style="@style/button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/button_padding_horizontal"
+                android:paddingTop="@dimen/button_padding_vertical"
+                android:paddingEnd="@dimen/button_padding_horizontal"
+                android:paddingBottom="@dimen/button_padding_vertical"
+                android:text="@string/btn_new_incidencia"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_error" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
-
-    <TextView
-        android:id="@+id/tv_error"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="2dp"
-        android:fontFamily="@font/highwaygothicnarrow"
-        android:padding="@dimen/dimen_12"
-        android:textColor="@color/red"
-        android:textSize="@dimen/login_secondary"
-        android:textStyle="italic"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/btn_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sv_new_incidencia"
-        tools:text="Falten camps per omplir" />
-
-    <Button
-        android:id="@+id/btn_ok"
-        style="@style/button_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="@dimen/button_padding_horizontal"
-        android:paddingTop="@dimen/button_padding_vertical"
-        android:paddingEnd="@dimen/button_padding_horizontal"
-        android:paddingBottom="@dimen/button_padding_vertical"
-        android:text="@string/btn_new_incidencia"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sv_new_incidencia" />
-
+<!--    </ScrollView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,10 @@
 package com.jrubiralta.portalbdn.ui.activity.newIncident
 
 import android.os.Bundle
-import android.view.View
-import androidx.core.content.ContextCompat
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
-import com.jrubiralta.portalbdn.Navigator.Navigator
 import com.jrubiralta.portalbdn.R
 import com.jrubiralta.portalbdn.presenter.incident.NewIncidentPresenter
 import com.jrubiralta.portalbdn.presenter.incident.NewIncidentPresenterImpl
@@ -15,7 +12,6 @@ import com.jrubiralta.portalbdn.ui.activity.BaseActivity
 import com.jrubiralta.portalbdn.ui.view.incident.NewIncidentView
 import com.jrubiralta.portalbdn.utils.gone
 import com.jrubiralta.portalbdn.utils.visible
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_new_incident.*
 import kotlinx.android.synthetic.main.view_toolbar.*
 
@@ -73,6 +69,8 @@ class NewIncidentActivity
     }
 
     private fun showError(title: Boolean, description: Boolean, location: Boolean) {
+        tv_error.visible()
+        tv_error.text = getString(R.string.error_message)
         if (title) {
             ll_title.background = getDrawable(R.drawable.zz_edittext_wrong)
         } else {

@@ -98,7 +98,7 @@ class DrawerFragment :
         list.add(MenuItem(screen = Screen.CALENDAR, iconId = R.drawable.ic_calendar_month, name = R.string.calendari, type = MenuType.CALENDAR))
         list.add(MenuItem(screen = Screen.POLLS, iconId = R.drawable.ic_polls, name = R.string.enquestes, type = MenuType.POLLS))
         list.add(MenuItem(screen = Screen.INCIDENTS, iconId = R.drawable.ic_warning, name = R.string.incidencies, type = MenuType.INCIDENTS))
-        list.add(MenuItem(screen = Screen.SETTINGS, iconId = R.drawable.ic_warning, name = R.string.configuracio, type = MenuType.SETTINGS))
+        list.add(MenuItem(screen = Screen.SETTINGS, iconId = R.drawable.ic_settings, name = R.string.configuracio, type = MenuType.SETTINGS))
         drawerListAdapter.replace(list)
     }
 

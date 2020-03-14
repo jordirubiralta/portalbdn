@@ -85,7 +85,7 @@ class SettingsActivity
                     presenter.logout()
                     Navigator.openLoginPage(NavParams(this@SettingsActivity, true))
                 }
-            })
+            }).show(supportFragmentManager, "logout")
         }
     }
 

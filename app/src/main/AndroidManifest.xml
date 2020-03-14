@@ -42,6 +42,7 @@
         <activity
             android:name=".ui.activity.settings.SettingsActivity"
             android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustPan"
             android:theme="@style/AppTheme"/>
     </application>
 </manifest>

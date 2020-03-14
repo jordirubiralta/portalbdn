@@ -25,4 +25,7 @@ class AppNetwork(
     override fun getPolls(token: String, request: RequestDto): Single<List<GetPollsResponseDto>> =
             apiService.getPolls(token, request)
 
+    override fun getEvents(token: String): Single<List<GetEventsResponseDto>> =
+            apiService.getEvents(token)
+
 }

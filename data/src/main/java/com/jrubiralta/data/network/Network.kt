@@ -12,4 +12,6 @@ interface Network {
     fun addIncidencia(token: String, request: NewIncidenciaRequestDto): Single<Unit>
     fun answerPoll(token: String, request: AnswerPollRequestDto): Single<Unit>
     fun getPolls(token: String, request: RequestDto): Single<List<GetPollsResponseDto>>
+    fun getEvents(token: String): Single<List<GetEventsResponseDto>>
+
 }

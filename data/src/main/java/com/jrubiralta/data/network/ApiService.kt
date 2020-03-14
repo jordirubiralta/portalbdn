@@ -7,7 +7,8 @@ import retrofit2.http.*
 interface ApiService {
 
     companion object {
-        val ENDPOINT_1 = "http://192.168.1.106:3000/"
+        val ENDPOINT_1 = "http://192.168.1.110:3000/"
+
     }
 
     @Headers("Content-Type: application/json")
@@ -37,4 +38,8 @@ interface ApiService {
     @POST("getPolls")
     fun getPolls(@Header("Authorization") auth: String,
                       @Body user_id: RequestDto): Single<List<GetPollsResponseDto>>
+
+    @Headers("Content-Type: application/json")
+    @GET("getEvents")
+    fun getEvents(@Header("Authorization") auth: String): Single<List<GetEventsResponseDto>>
 }

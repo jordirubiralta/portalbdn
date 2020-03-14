@@ -48,6 +48,13 @@ class HomeActivity
         init()
     }
 
+    override fun onResume() {
+        super.onResume()
+        if (drawer.isDrawerOpen(Gravity.LEFT)) {
+            drawer.closeDrawer(Gravity.LEFT)
+        }
+    }
+
     private fun init() {
         initView()
         initListeners()
@@ -67,7 +74,6 @@ class HomeActivity
     }
 
     private fun initData() {
-        presenter.getData()
     }
 
     override fun onBackPressed() {
@@ -84,7 +90,7 @@ class HomeActivity
         val fragment = NewsFragment.newInstance()
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.noticies)
-        presenter.moveDrawer()
+//        presenter.moveDrawer()
         bt_add.gone()
         bt_info.visible()
     }
@@ -112,7 +118,7 @@ class HomeActivity
         replaceFragment(R.id.fragment_container, fragment)
         toolbar_title.setText(R.string.incidencies)
         presenter.moveDrawer()
-        bt_add.gone()
+        bt_add.visible()
         bt_info.gone()
     }
 

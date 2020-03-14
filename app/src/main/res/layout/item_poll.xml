@@ -17,7 +17,6 @@
         android:id="@+id/tv_poll_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
         android:textColor="@color/darkx_grey"
         android:textSize="@dimen/text_small"
         android:fontFamily="@font/highwaygothicnarrow"

@@ -26,7 +26,6 @@ class IncidentListPresenterImpl(
                 },
                 onError = {
                     // TO DO DIALOG FOR ERROR
-                }
-        )
+                })
     }
 }

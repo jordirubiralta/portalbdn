@@ -7,5 +7,4 @@ interface HomePresenter
     : BasePresenter<HomeView> {
 
     fun moveDrawer()
-    fun getData()
 }

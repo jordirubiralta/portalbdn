@@ -20,5 +20,4 @@ class PollsRepositoryImpl(
             network.getPolls(persistence.getAccessToken(),
                     RequestDto(persistence.getUser().id!!))
                     .map { it.map { it.toModel() } }
-
 }
