@@ -7,7 +7,7 @@ import retrofit2.http.*
 interface ApiService {
 
     companion object {
-        val ENDPOINT_1 = "http://192.168.1.110:3000/"
+        val ENDPOINT_1 = "http://192.168.1.107:4000/"
 
     }
 
